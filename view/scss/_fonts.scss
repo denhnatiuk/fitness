@@ -1,0 +1,20 @@
+$Lato-ttf-collection: (
+  'Black',
+  'BlackItalic',
+  'Bold',
+  'BoldItalic',
+  'Hairline',
+  'HairlineItalic',
+  'Light',
+  'LightItalic',
+  'Regular',
+  'Italic'
+);
+@each $font in $Lato-ttf-collection {
+    @font-face {
+      font-family: 'Lato-#{$font}';
+      src: url("/fonts/Lato-#{$font}.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+}

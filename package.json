@@ -1,0 +1,26 @@
+{
+  "name": "fitness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "dist": "gulp --production"
+  },
+  "author": "Gradaz <denys.hnatiuk@gmail.com>",
+  "license": "SEE LICENSE IN license.txt",
+  "devDependencies": {
+    "autoprefixer": "^8.6.1",
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.14",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0"
+  }
+}

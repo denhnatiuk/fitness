@@ -1,0 +1,34 @@
+html{
+  font-family: 'Lato-Regular';
+  font-size: 16px;
+}
+#trainersCarousel .carousel-inner .item .carousel-caption h3{
+  font-family: 'Lato-Bold';
+  font-size: 25px;
+  text-align: right;
+}
+.trainers-carousel-header h2{
+  font-family: 'Lato-BlackItalic';
+  font-size: 35px;
+}
+.news-feed .news-feed-header .section-title{
+  font-family: 'Lato-BlackItalic';
+  font-size: 35px;
+}
+.banner{
+  aside.container{
+    .yoga-banner-header{
+      .yoga-banner-title-sup{
+        font-family: 'Lato-Regular';
+        font-size: 20px;
+      }
+      .yoga-banner-title{
+        font-family: 'Lato-Italic';
+        font-size: 35px;
+        .title-caption{
+          font-family: 'Lato-BlackItalic';
+        }
+      }
+    }
+  }
+}
