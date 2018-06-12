@@ -2,4 +2,21 @@
   .well.classes-thumbnail{
     max-width: 23%;
   }
+  .instagallery{
+    position: relative;
+    .instagallery-header{
+      width:32vw;
+      height:32vw;
+      position: relative;
+      left:auto;
+      top:0;
+    }
+    .gallery-item{
+      width:32vw;
+      height:32vw;
+      &:nth-child(2){
+        display: none;
+      }
+    }
+  }
 }

@@ -1,0 +1,16 @@
+@media screen and (max-width:576px) {
+  .instagallery{
+    position: relative;
+    .instagallery-header{
+      width:100%;
+      height:auto;
+      position: relative;
+      left:auto;
+      top:0;
+    }
+    .gallery-item{
+      width:100%;
+      height:auto;
+    }
+  }
+}

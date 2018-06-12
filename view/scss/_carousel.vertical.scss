@@ -4,6 +4,10 @@
   > .item {
     width: 100%;
     transition: 0.6s ease-in-out top;
+    max-height: 768px;
+    & img {
+      filter:brightness(0.5);
+    }
     @media all and (transform-3d), (-webkit-transform-3d) {
       transition: 0.6s ease-in-out;
       &.next,
@@ -76,7 +80,7 @@
       .hero-title-sup{
         margin-left: 100px;
         position: relative;
-        z-index: 2;
+        z-index: 3;
       }
       .hero-title{
         margin-left: 100px;

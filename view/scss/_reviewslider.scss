@@ -1,0 +1,101 @@
+#reviewslider .carousel-inner {
+  position: relative;
+  .item{
+    position:relative;
+    // float: left;
+    &.active{
+      // .item-inner{
+      //   display: block;
+      //   float: left;
+      // }
+      &.left { left: -50%; }
+    }
+    &.next   { left:  50%; }
+    &.prev   { left: -50%; }
+    .item-inner{
+      position: relative;
+      width:49%;
+      float: left;
+      img{
+        width:133px;
+        height:133px;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        left:15px;
+        border:10px solid #f1f2f4;
+      }
+      .well{
+        height:375px;
+        margin-top: 75px;
+        margin-left: 75px;
+        .carousel-caption{
+          position: relative;
+          left:0;
+          right:0;
+          top:0;
+          padding:0;
+          text-shadow: none;
+          .reviewer{
+            margin:0 100px;
+            text-align: left;
+            color:#000;
+          }
+          .reviewer-occupation{
+            display: block;
+            margin:0 100px;
+            text-align: left;
+            color: #bababa;
+          }
+          blockquote{
+            font-family: 'Lato-Light';
+            margin-top: 65px;
+            border:0;
+            color:#000;
+            text-align: left;
+            span{
+              text-indent: -1rem;
+              font-size: 60px;
+              line-height: 3rem;
+              float: left;
+              color:#bababa;
+              &.right{
+                float:right;
+                text-indent: -3rem;
+                line-height: 5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#reviewslider .carousel-control{
+  border:1px solid #000;
+  color:#000;
+  border-radius: 50%;
+  background-image: none;
+  width:2rem;
+  height:2rem;
+  &.left{
+    left:0;
+    top:50%;
+  }
+  &.right{
+    right:0;
+    top:50%;
+  }
+}
+#reviewslider .carousel-control .glyphicon-chevron-left,
+#reviewslider .carousel-control .glyphicon-chevron-right,
+#reviewslider .carousel-control .icon-next,
+#reviewslider .carousel-control .icon-prev{
+  font-size: 18px;
+  text-align: center;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  margin:5px 0 0 0;
+}

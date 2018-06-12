@@ -1,0 +1,19 @@
+@media screen and (min-width:992px){
+  .instagallery{
+    position: relative;
+    .instagallery-header{
+      width:16vw;
+      height:16vw;
+      position: absolute;
+      left:17vw;
+      top:0;
+    }
+    .gallery-item{
+      width:16vw;
+      height:16vw;
+      &:nth-child(2){
+        display: block;
+      }
+    }
+  }
+}
