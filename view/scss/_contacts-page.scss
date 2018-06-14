@@ -1,0 +1,153 @@
+.template-contacts{
+  .contacts-section{
+    position: relative;
+    .contacts-container{
+      background-color: #fff;
+      z-index: 2;
+      .contacts-header{
+        padding:75px 70px 0;
+        .contacts-title{
+          font-family: 'Lato-BlackItalic';
+          font-size: 35px;
+          margin:0;
+          padding: 0;
+          max-width: 410px;
+          color: #000;
+        }
+      }
+      .contacts-wrapper{
+        padding:40px 70px 0;
+        .contacts-list{
+          max-width: 410px;
+          list-style-type: none;
+          margin-bottom: 0;
+          padding-bottom:25px;
+          .contacts-item{
+            .contacts-link{
+              font-family: 'Lato-Bold';
+              font-size: 18px;
+              line-height: 24px;
+              text-decoration: none;
+              color: #000;
+              padding-bottom: 25px;
+              .tel{
+                display: block;
+                position: relative;
+                padding-bottom: 25px;
+                &:before{
+                  content:'';
+                  font-family: FontAwesome;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 1rem;
+                  color: #0b3a9f;
+                  position: absolute;
+                  top:0;
+                  left:-25px;
+                }
+              }
+              .address{
+                position: relative;
+                &:before{
+                  content:'';
+                  font-family: FontAwesome;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 1rem;
+                  color: #0b3a9f;
+                  position: absolute;
+                  top:0;
+                  left:-25px;
+                }
+              }
+              .email{
+                position: relative;
+                padding-bottom: 0;
+                &:before{
+                  content:'';
+                  font-family: FontAwesome;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 1rem;
+                  color: #0b3a9f;
+                  position: absolute;
+                  top:0;
+                  left:-25px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contactform-wrapper{
+        padding:0 70px;
+        #contactForm{
+          max-width: 410px;
+          .input-group{
+            display: block;
+            label{
+              display: block;
+              width: 410px;
+              font-family: 'Lato-Light';
+              font-size:16px;
+              line-height: 24px;
+              margin-bottom: 18px;
+            }
+            input{
+              width: 410px;
+              display: block;
+              margin-bottom: 30px;
+              height: 47px;
+              background-color: #f1f2f4;
+              border:0;
+            }
+            textarea{
+              width: 410px;
+              margin-bottom: 25px;
+              height:196px;
+              background-color: #f1f2f4;
+              border:0;
+            }
+            button{
+
+              padding: 1rem 2.5rem;
+              margin-bottom: 30px;
+            }
+            #contactName{}
+            #contactEmail{}
+            #contactMessage{}
+            #contactSubmit{}
+          }
+        }
+      }
+    }
+  }
+  #map{
+    height:925px;
+  }
+}
+@media screen and (max-width:576px){
+  .contacts-section .contacts-container{
+    position: relative;
+  }
+}
+@media screen and (min-width:576px){
+  .contacts-section .contacts-container{
+    position: relative;
+  }
+}
+@media screen and (min-width:768px){
+  .contacts-section .contacts-container{
+    position: relative;
+  }
+}
+@media screen and (min-width:992px){
+  .contacts-section{
+    position:relative;
+    .contacts-container{
+      position: absolute;
+      top:0;
+      left:50%;
+    }
+  }
+}
