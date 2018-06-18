@@ -50,7 +50,7 @@
       </nav>
     </header>
     <div class="main-content container-fluid">
-      <section class="section row classes-hero page-hero">
+      <section class="section row lesson-hero page-hero">
         <div class="container hero-caption">
           <div class="breadcrumbs">
             <a href="/index.html" class="home-link breadcrumbs-link">Home</a>
@@ -66,27 +66,32 @@
         </div>
       </section>
       <section class="section row training">
-        <div class="col-xs-12 col-md-6 training-thumbnail-wrapper">
-          <img src="./images/trainer-1.png" alt="" class="trainer-thumbnail img-responsive">
-        </div>
-        <div class="col-xs-12 col-md-6 training-bio">
-          <h2 class="trainers-name">FITNESS</span></h2>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi delectus, officiis repellendus unde ipsum autem rem, ullam dolorem. Obcaecati illum molestiae, fuga nihil rerum reiciendis exercitationem nam! Sit, ut totam.</p>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi delectus, officiis repellendus unde ipsum autem rem, ullam dolorem. Obcaecati illum molestiae, fuga nihil rerum reiciendis exercitationem nam! Sit, ut totam.</p>
-          <h3 class="training-header">Training Skills</h3>
-          <div class="trainers-stats">
-            <div class="stats-row">
-              <span class="stat-label">Educability</span><span class="stat-value"data-size='95'></span>
-            </div>
-            <div class="stats-row">
-              <span class="stat-label">Expirience</span><span class="stat-value"data-size='80'></span>
-            </div>
-            <div class="stats-row">
-              <span class="stat-label">Skills</span><span class="stat-value"data-size='65'></span>
+        <div class="container">
+          <div class="col-xs-12 col-md-6 training-thumbnail-wrapper">
+            <img src="./images/trainer-1.png" alt="" class="trainer-thumbnail img-responsive">
+          </div>
+          <div class="col-xs-12 col-md-6 training-bio">
+            <h2 class="trainers-name">FITNESS</span></h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi delectus, officiis repellendus unde ipsum autem rem, ullam dolorem. Obcaecati illum molestiae, fuga nihil rerum reiciendis exercitationem nam! Sit, ut totam.</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi delectus, officiis repellendus unde ipsum autem rem, ullam dolorem. Obcaecati illum molestiae, fuga nihil rerum reiciendis exercitationem nam! Sit, ut totam.</p>
+            <h3 class="training-header">Training Skills</h3>
+            <div class="trainers-stats">
+              <div class="stats-row">
+                <span class="stat-label">Educability</span><span class="stat-value"data-size='95'></span>
+              </div>
+              <div class="stats-row">
+                <span class="stat-label">Expirience</span><span class="stat-value"data-size='80'></span>
+              </div>
+              <div class="stats-row">
+                <span class="stat-label">Skills</span><span class="stat-value"data-size='65'></span>
+              </div>
+              <div class="stats-row">
+                <span class="stat-label">Skills</span><span class="stat-value"data-size='82'></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       </section>
       <section class="section row training-info">
         <div class="container">
@@ -195,69 +200,116 @@
               </div>
               <input id="scheduleSubmit" type="submit" class="btn btn-lg btn-filled" value="Join Class Now">
               <script>
-                var wrapper = document.querySelector('.tabs-wrapper');
-                var tabs = document.querySelectorAll('input[name="tab"]');
-                var submit = document.getElementById('scheduleSubmit');
-                var checkedTime = new Object();
-                for (let i=0; i<tabs.length; i++){
-                  var scedule = tabs[i].nextSibling.nextSibling.querySelectorAll('input[name="time"]');
-                  for(let j=0; j<scedule.length; j++){
-                    var l;
-                    scedule[j].addEventListener('change',function(){
-                      if(this.checked) {
-                        Object.keys(checkedTime).length !== 0 ? l++ : l = 1;
-                        checkedTime[l] = tabs[i].value+' '+scedule[j].value;
-                        var e = encodeURIComponent(JSON.stringify(checkedTime));
-                        console.log(checkedTime[l]);
-                        console.log(e);
-                      } else {
-                        // for(var k = 0; k < Object.values(checkedTime).length; k++) {
-                        //     if(Object.values(checkedTime)[k] == tabs[i].value+' '+scedule[j].value) {
-                        //         Object.values(checkedTime).splice(k, 1);
-                        //         // break;
-                        //     }
-                        // }
-                        // //find & remove in object this value
-                        // // Object.values(checkedTime).
-                        // console.log('urrrrg!!');
-                        // console.log(checkedTime[l]);
-                        // console.log(checkedTime);
-                        // console.log(e);
-                      }
-                    });
+                if (document.querySelector('.tabs-wrapper')){
+                  var wrapper = document.querySelector('.tabs-wrapper');
+                  var tabs = document.querySelectorAll('input[name="tab"]');
+                  var submit = document.getElementById('scheduleSubmit');
+                  var checkedTime = new Object();
+                  for (let i=0; i<tabs.length; i++){
+                    var scedule = tabs[i].nextSibling.nextSibling.querySelectorAll('input[name="time"]');
+                    for(let j=0; j<scedule.length; j++){
+                      var l,
+                          p;
+                      scedule[j].addEventListener('change',function(){
+                        var val = tabs[i].value+' '+scedule[j].value;
+                        var str = JSON.stringify(checkedTime);
+                        var substr = '"'+ l +'",'+ JSON.stringify(val);
+                          // console.log(str);
+                          // console.log(substr);
+                          // console.log(str.indexOf(substr));
+                        if(this.checked && str.indexOf(substr) == -1){
+                          Object.keys(checkedTime).length !== 0 ? l++ : l = 1;
+                          checkedTime[l] = val;
+                          // console.log("this value added "+ checkedTime[l]);
+                          // console.log(checkedTime);
+                        } else if (this.checked && str.indexOf(substr) !== -1) {
+                          // console.log("value already exists "+ val);
+                          // console.log(checkedTime);
+                        } else if (!this.checked && str.indexOf(substr) == -1) {
+                          Object.keys(checkedTime).forEach(function(key){
+                            if(checkedTime[key] == val)
+                              delete checkedTime[key];
+                          });
+                        } else {
+                          // console.log('somthing wrong :(');
+                          // console.log(checkedTime);
+                        }
+                      });
+                    }
                   }
+                  submit.addEventListener('submit', function(event){
+                    event.preventDefault();
+                    el = JSON.stringify(checkedTime);
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', window.location.href+ el);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onload = function() {
+                        if(xhr.status===200&&xhr.responseText!==checkedTime){
+                            alert('Something went wrong.  Name is now ' + xhr.responseText);
+                        }
+                        else if (xhr.status !== 200) {
+                            alert('Request failed.  Returned status of ' + xhr.status);
+                        }
+                    };
+                    xhr.send(encodeURI('?' + el ));
+                  });
                 }
-                console.log(window.location.href);
-                submit.addEventListener('submit', function(event){
-                  event.preventDefault();
-                  console.log(window.location.href);
-                  console.log(checkedTime);
-                  var xhr = new XMLHttpRequest();
-                  xhr.open('POST', window.location.href+e);
-                  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                  xhr.onload = function() {
-                      if(xhr.status===200&&xhr.responseText!==checkedTime){
-                          alert('Something went wrong.  Name is now ' + xhr.responseText);
-                      }
-                      else if (xhr.status !== 200) {
-                          alert('Request failed.  Returned status of ' + xhr.status);
-                      }
-                  };
-                  xhr.send(encodeURI('name=' + checkedTime ));
-                });
+
               </script>
             </form>
           </div>
           <div class="col-xs-12 col-md-6">
             <h3 class="title">Gallery</h3>
             <div class="gallery-wrapper">
-              <img src="./images/instagallery-1.png" alt="" class="gallery-thumbnail">
-              <img src="./images/instagallery-2.png" alt="" class="gallery-thumbnail">
-              <img src="./images/instagallery-3.png" alt="" class="gallery-thumbnail">
-              <img src="./images/instagallery-4.png" alt="" class="gallery-thumbnail">
-              <img src="./images/instagallery-5.png" alt="" class="gallery-thumbnail">
-              <img src="./images/instagallery-6.png" alt="" class="gallery-thumbnail">
+              <div class="gallery-item-wrapper">
+                <div class="gallery-item-overlay"></div>
+                <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-1.min.png" data-src="./images/lesson-gallery-1.png" alt="" class="gallery-thumbnail">
+              </div>
+              <div class="gallery-item-wrapper">
+                <div class="gallery-item-overlay"></div>
+                <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-2.min.png" data-src="./images/lesson-gallery-2.png" alt="" class="gallery-thumbnail">
+              </div>
+              <div class="gallery-item-wrapper">
+                <div class="gallery-item-overlay"></div>
+                <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-3.min.png" data-src="./images/lesson-gallery-3.png" alt="" class="gallery-thumbnail">
+              </div>
+              <div class="gallery-item-wrapper">
+                <div class="gallery-item-overlay"></div>
+                <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-4.min.png" data-src="./images/lesson-gallery-4.png" alt="" class="gallery-thumbnail">
+              </div>
+              <div class="gallery-item-wrapper">
+                <div class="gallery-item-overlay"></div>
+                <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-5.min.png" data-src="./images/lesson-gallery-5.png" alt="" class="gallery-thumbnail">
+              </div>
+              <div class="gallery-item-wrapper">
+                <div class="gallery-item-overlay"></div>
+                <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-6.min.png" data-src="./images/lesson-gallery-6.png" alt="" class="gallery-thumbnail">
+              </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="galleryModal" role="dialog">
+              <div class="modal-dialog modal-md">
+                <!-- Modal content-->
+                <div id="imgPlaceholder" class="modal-content">
+                </div>
+              </div>
+            </div>
+            <script>
+              if (document.querySelector('.gallery-wrapper')){
+                  var icons = document.querySelectorAll('.search-icon');
+                  var modal = document.getElementById('galleryModal');
+                  var imgPlaceholder = document.getElementById('imgPlaceholder');
+                  for (var i=0; i<icons.length; i++){
+                    icons[i].addEventListener('click', function(){
+                        imgPlaceholder.innerHTML = '';
+                        var img = this.nextSibling.cloneNode();
+                        img.src = img.dataset.src;
+                        imgPlaceholder.appendChild(img);
+                    });
+                  }
+              }
+            </script>
           </div>
         </div>
       </section>

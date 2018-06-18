@@ -1241,17 +1241,86 @@ aside.sidebar-footer{
   }
 }
 // lesson page
+.training{
+  padding-top: 50px;
+}
+.training-info{
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.training-thumbnail-wrapper{
+  img{
+    margin:0 auto;
+  }
+}
+.training-bio{
+  .trainers-name{
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px;
+  }
+  .description{
+    font-family: 'Lato-Light';
+    font-size: 16px;
+  }
+  .training-header{
+    font-family: 'Lato-Bold';
+    font-size: 25px;
+  }
+  .trainers-stats{
+    .stats-row{
+      position: relative;
+      width:100%;
+      display: block;
+      margin-bottom: 1rem;
+      padding-left: 40px;
+      .stat-label{
+        font-family: 'Lato-Bold';
+        font-size:16px;
+        width:100%;
+        display: block;
+        float: none;
+      }
+      .stat-value{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        &>.stat-length{
+          display: flex;
+          margin-top:6px;
+          margin-right: 2rem;
+          height:12px;
+          width:100px;
+          border-radius: 6px;
+          background-color: #0b3a9f;
+        }
+      }
+    }
+  }
+}
 .training-info{
   .coach-bio{
-    .coach-name{}
-    .coach-motto{}
-    .description{}
+    .coach-name{
+      font-family: 'Lato-Bold';
+      font-size: 25px;
+    }
+    .coach-motto{
+      font-family: 'Lato-Regular';
+      font-size: 20px;
+    }
+    .description{
+      font-family: 'Lato-Light';
+      font-size: 16px;
+    }
   }
   .schedule{
-    .title{}
+    .title{
+      font-family: 'Lato-Bold';
+      font-size: 25px;
+    }
     .tabs-wrapper{
       position: relative;
-      padding-bottom: 12rem;
+      padding-bottom: 8rem;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -1292,6 +1361,84 @@ aside.sidebar-footer{
         input[name='time']:checked+label{
           text-decoration: underline;
           font-family: 'Lato-Black';
+        }
+      }
+    }
+    #scheduleSubmit{
+      font-family: 'Lato-Regular';
+      font-size: 15px;
+    }
+  }
+  .title{
+    font-family: 'Lato-Bold';
+    font-size: 25px;
+  }
+  .gallery-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .gallery-item-wrapper{
+      position: relative;
+      padding:0;
+       width:250px;
+       height:165px;
+       overflow: hidden;
+       margin: 0 15px 15px 0;
+      .gallery-item-overlay{
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        z-index: 2;
+        height: 0;
+        opacity:0;
+        background: linear-gradient(to top, rgba(11, 58, 159, .5) 0, rgba(11, 58, 159, .5) 100%);
+        filter:saturate(2.5);
+        transition: all .3s ease-in-out;
+      }
+      &:hover .gallery-item-overlay{
+        height:100%;
+        opacity:1;
+        transition: all .3s ease-in-out;
+      }
+      .gallery-thumbnail{
+        width: 100%;
+        height:auto;
+      }
+      .search-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0;
+        width: 100%;
+        height:100%;
+        z-index: 3;
+        &:before{
+          position: absolute;
+          content:'';
+          width:.5rem;
+          height:.5rem;
+          transform: rotate(-180deg);
+          transition: all .3s ease-in-out;
+        }
+        &:hover:before{
+          position: absolute;
+          content:'';
+          width:100%;
+          height:100%;
+          transform: rotate(0);
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+  #galleryModal{
+    .modal-dialog{
+      #imgPlaceholder{
+        img{
+          width:100%;
+          height:auto;
         }
       }
     }
