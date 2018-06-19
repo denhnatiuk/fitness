@@ -146,6 +146,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.reviews-hero {
+  background: url(../images/reviews-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.registration-hero {
+  background: url(../images/registration-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.err-hero {
+  background: url(../images/err-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .stats-row:before {
   content: '';
   display: block;
@@ -1381,6 +1399,191 @@ aside.sidebar-footer .widget_older_post {
 .training-info #galleryModal .modal-dialog #imgPlaceholder img {
   width: 100%;
   height: auto; }
+
+.template-reviews .reviews {
+  padding: 30px 0; }
+  .template-reviews .reviews .review-item {
+    min-width: 48%;
+    max-width: 300px;
+    padding: 30px 0;
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .template-reviews .reviews .review-item .item-inner {
+      position: relative; }
+      .template-reviews .reviews .review-item .item-inner img {
+        width: 133px;
+        height: 133px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        border: 10px solid #f1f2f4;
+        z-index: 2; }
+      .template-reviews .reviews .review-item .item-inner .well {
+        position: relative;
+        margin-left: 75px;
+        margin-top: 75px;
+        margin-right: 15px; }
+        .template-reviews .reviews .review-item .item-inner .well .carousel-caption {
+          position: relative;
+          right: 0;
+          left: 0;
+          padding-bottom: 0;
+          text-shadow: none;
+          color: #000;
+          text-align: left; }
+          .template-reviews .reviews .review-item .item-inner .well .carousel-caption .reviewer {
+            margin-left: 50px;
+            margin-top: 0;
+            font-family: 'Lato-BoldItalic';
+            text-transform: uppercase; }
+          .template-reviews .reviews .review-item .item-inner .well .carousel-caption .reviewer-occupation {
+            display: block;
+            margin: 0 0 30px 50px;
+            font-family: 'Lato-Regular';
+            color: #bababa; }
+          .template-reviews .reviews .review-item .item-inner .well .carousel-caption blockquote {
+            font-family: 'Lato-Light';
+            font-size: 18px;
+            line-height: 24px;
+            border: 0; }
+            .template-reviews .reviews .review-item .item-inner .well .carousel-caption blockquote .quote {
+              display: inline-block;
+              font-size: 60px;
+              line-height: 0px; }
+              .template-reviews .reviews .review-item .item-inner .well .carousel-caption blockquote .quote.left {
+                text-indent: -20px;
+                transform: translateY(23px);
+                color: #bababa; }
+              .template-reviews .reviews .review-item .item-inner .well .carousel-caption blockquote .quote.right {
+                transform: translateY(40px);
+                color: #bababa; }
+  .template-reviews .reviews .pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    .template-reviews .reviews .pagination div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center; }
+      .template-reviews .reviews .pagination div ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0; }
+        .template-reviews .reviews .pagination div ul li {
+          margin: 0.5rem;
+          width: 2rem;
+          height: 2rem;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center; }
+          .template-reviews .reviews .pagination div ul li.active {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: #0b3a9f;
+            border: 1px solid #fff;
+            outline: 3px solid #0b3a9f; }
+
+.template-reviews #respond {
+  max-width: 800px; }
+  .template-reviews #respond .reply-title {
+    margin: 45px 0; }
+
+.registration {
+  position: relative; }
+  .registration div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .registration div .registration-thumbnail {
+      height: 100%; }
+    .registration div #registration {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 30px; }
+      .registration div #registration .registration-title {
+        font-family: 'Lato-BlackItalic';
+        font-size: 35px; }
+      .registration div #registration .description {
+        font-family: 'Lato-Light';
+        font-size: 16px; }
+      .registration div #registration .input-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 400px;
+        font-family: 'Lato-Light';
+        font-size: 16px; }
+        .registration div #registration .input-group label {
+          width: 100%;
+          max-width: 400px;
+          margin: 15px 0 10px; }
+          .registration div #registration .input-group label span {
+            color: #f00; }
+        .registration div #registration .input-group input[type="text"] {
+          width: 100%;
+          max-width: 400px;
+          border: 0;
+          height: 2rem;
+          padding-left: 1rem; }
+        .registration div #registration .input-group select {
+          width: 100%;
+          max-width: 400px;
+          border: 0;
+          height: 2rem;
+          padding-left: 1rem; }
+        .registration div #registration .input-group textarea {
+          border: 0;
+          width: 100%;
+          max-width: 400px;
+          height: 8rem; }
+        .registration div #registration .input-group input[type="submit"] {
+          margin: 30px 0; }
+
+.section-404 {
+  padding: 75px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; }
+  .section-404 .title {
+    font-family: 'Lato-Black';
+    font-size: 114px;
+    color: #0b3a9f; }
+  .section-404 .title-sub {
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px; }
+    .section-404 .title-sub span {
+      color: #0b3a9f; }
+  .section-404 .btn-filled {
+    margin-top: 50px; }
 
 .site-header {
   position: absolute;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{site.lang | default:en-US}}">
+<html lang="zxx">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,19 +17,16 @@
     <meta name="keywords" content="fitness, health, sports">
 
   </head>
-  <body>
+  <body class="home-page">
     <header class="site-header header">
       <nav class="navbar navbar-transparent">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
             <div class="navbar-brand">
-              <a class="brand-title" href="#">Fitness <br><span>CENTER</span></a>
+              <a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a>
             </div>
           </div>
           <div class="collapse navbar-collapse" id="topNavbar">
@@ -37,8 +34,8 @@
               <a href="tel:78342321251" class="navbar-tel tel-icon btn btn-lg btn-transparent">7(834)232-12-51</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
+              <li class="active"><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our trainers</a></li>
               <li><a href="./news.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
@@ -144,17 +141,17 @@
             <div class="section-title-sup"><span class="section-icon muscles-icon"></span></div>
             <h3 class="section-title">Training for men</h3>
             <div class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-            <a href="" class="btn btn-transparent more">Show all</a>
+            <a href="./classes.html" class="btn btn-transparent more">Show all</a>
           </div>
-          <a class="well classes-thumbnail classes-gym" aria-label="Gym">
+          <a class="well classes-thumbnail classes-gym" aria-label="Gym" href="./classes.html">
             <div class="classes-thumbnail--overlay"><span class="btn btn-lg btn-border">Learn more</span></div>
             <span class="classes-title">Gym</span>
           </a>
-          <a class="well classes-thumbnail classes-boxing" aria-label="Boxing">
+          <a class="well classes-thumbnail classes-boxing" aria-label="Boxing" href="./classes.html">
             <div class="classes-thumbnail--overlay"><span class="btn btn-lg btn-border">Learn more</span></div>
             <span class="classes-title">Boxing</span>
           </a>
-          <a class="well classes-thumbnail classes-crossfit" aria-label="CrossFit">
+          <a class="well classes-thumbnail classes-crossfit" aria-label="CrossFit" href="./classes.html">
             <div class="classes-thumbnail--overlay"><span class="btn btn-lg btn-border">Learn more</span></div>
             <span class="classes-title">CrossFit</span>
           </a>
@@ -166,17 +163,17 @@
             <div class="section-title-sup"><span class="section-icon excersize-icon"></span></div>
             <h3 class="section-title">Training for women</h3>
             <div class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-            <a href="" class="btn btn-transparent more">Show all</a>
+            <a href="./classes.html" class="btn btn-transparent more">Show all</a>
           </div>
-          <a class="well classes-thumbnail classes-yoga" aria-label="Yoga">
+          <a class="well classes-thumbnail classes-yoga" aria-label="Yoga" href="./classes.html">
             <div class="classes-thumbnail--overlay"><span class="btn btn-lg btn-border">Learn more</span></div>
             <span class="classes-title">Yoga</span>
           </a>
-          <a class="well classes-thumbnail classes-fitness" aria-label="Fitness">
+          <a class="well classes-thumbnail classes-fitness" aria-label="Fitness" href="./classes.html">
             <div class="classes-thumbnail--overlay"><span class="btn btn-lg btn-border">Learn more</span></div>
             <span class="classes-title">Fitness</span>
           </a>
-          <a class="well classes-thumbnail classes-stretching" aria-label="Stretching">
+          <a class="well classes-thumbnail classes-stretching" aria-label="Stretching" href="./classes.html">
             <div class="classes-thumbnail--overlay"><span class="btn btn-lg btn-border">Learn more</span></div>
             <span class="classes-title">Stretching</span>
           </a>
@@ -186,7 +183,7 @@
         <div class="container">
           <div class="trainers-carousel-header">
             <h2 class="section-title">OUR TRAINERS</h2>
-            <a href="#" class="btn btn-lg btn-filled">View all</a>
+            <a href="./trainers.html" class="btn btn-lg btn-filled">View all</a>
           </div>
           <div id="trainersCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -247,8 +244,8 @@
                 </div>
               </div>
             </div>
-            <a class="left carousel-control" href="#trainersCarousel" data-slide="prev" aria-label="previous slide"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#trainersCarousel" data-slide="next" aria-label="next slide"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a class="left carousel-control" href="#trainersCarousel" data-slide="prev" aria-label="previous slide" title="slide left"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#trainersCarousel" data-slide="next" aria-label="next slide" title="slide right"><span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>
       </section>
@@ -256,40 +253,40 @@
         <div class="container">
           <div class="news-feed-header">
             <h2 class="section-title">NEWS OF OUR GYM</h2>
-            <a href="#" class="btn btn-lg btn-filled">View all</a>
+            <a href="./news.html" class="btn btn-lg btn-filled">View all</a>
           </div>
         </div>
         <div class="container news-wrapper">
-          <a href="#" class="news-link">
+          <a href="./news.html" class="news-link">
             <article class="news-item">
-              <img  alt="" src="./images/news-thumbnail-1.png" class="news-thumbnail">
+              <img  alt="news thumbnail" src="./images/news-thumbnail-1.png" class="news-thumbnail">
               <div class="news-item-description">
                 <div class="meta">21.05.2018</div>
                 <h3 class="news-item-title">He made the first step!</h3>
               </div>
             </article>
           </a>
-          <a href="#" class="news-link">
+          <a href="./news.html" class="news-link">
             <article class="news-item">
-              <img  alt="" src="./images/news-thumbnail-2.png" class="news-thumbnail">
+              <img  alt="news thumbnail" src="./images/news-thumbnail-2.png" class="news-thumbnail">
               <div class="news-item-description">
                 <div class="meta">21.05.2018</div>
                 <h3 class="news-item-title">Our beautiful bridesmaids</h3>
               </div>
             </article>
           </a>
-          <a href="#" class="news-link">
+          <a href="./news.html" class="news-link">
             <article class="news-item">
-              <img  alt="" src="./images/news-thumbnail-3.png" class="news-thumbnail">
+              <img  alt="news thumbnail" src="./images/news-thumbnail-3.png" class="news-thumbnail">
               <div class="news-item-description">
                 <div class="meta">21.05.2018</div>
                 <h3 class="news-item-title">Inspiration fitness video</h3>
               </div>
             </article>
           </a>
-          <a href="#" class="news-link">
+          <a href="./news.html" class="news-link">
             <article class="news-item">
-              <img  alt="" src="./images/news-thumbnail-4.png" class="news-thumbnail">
+              <img  alt="news thumbnail" src="./images/news-thumbnail-4.png" class="news-thumbnail">
               <div class="news-item-description">
                 <div class="meta">21.05.2018</div>
                 <h3 class="news-item-title">Church has just been released</h3>
@@ -298,20 +295,20 @@
           </a>
         </div>
       </section>
-      <section class="section row banner">
-        <aside class="container">
+      <aside class="section row banner">
+        <div class="container">
           <div class="yoga-banner-header">
             <span class="yoga-banner-title-sup">New workouts</span>
             <h2 class="yoga-banner-title">SPECIAL FITNESS TRAINING <span class="title-caption">FOR PREGNANT WOMEN</span></h2>
-            <a href="#" class="btn btn-lg btn-filled">Go to workout</a>
+            <a href="./classes.html" class="btn btn-lg btn-filled">Go to workout</a>
           </div>
-        </aside>
-      </section>
+        </div>
+      </aside>
       <section class="section row reviews-carousel">
         <div class="container">
           <div class="reviews-header">
             <h2 class="reviews-title">REVIEWS <br> ABOUT OUR TEAM</h2>
-            <a href="#" class="btn btn-lg btn-filled">View all</a>
+            <a href="./classes.html" class="btn btn-lg btn-filled">View all</a>
           </div>
         </div>
         <div class="container">
@@ -343,7 +340,7 @@
                     <div class="carousel-caption">
                       <h3 class="reviewer">Johnny Bobson</h3>
                       <span class="reviewer-occupation">New Orleans Centre</span>
-                      <blockquote cite="#"><span class="quote left">&ldquo;</span>
+                      <blockquote cite="./review.html"><span class="quote left">&ldquo;</span>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero aut perspiciatis tempore temporibus assumenda recusandae maxime cupiditate eligendi tempora, aperiam facere provident laboriosam. Veniam sint fuga in excepturi velit quasi.
                       <span class="quote right">&rdquo;</span></blockquote>
                     </div>
@@ -357,7 +354,7 @@
                     <div class="carousel-caption">
                       <h3 class="reviewer">Johnny Bobson</h3>
                       <span class="reviewer-occupation">New Orleans Centre</span>
-                      <blockquote cite="#"><span class="quote left">&ldquo;</span>
+                      <blockquote cite="./review.html"><span class="quote left">&ldquo;</span>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero aut perspiciatis tempore temporibus assumenda recusandae maxime cupiditate eligendi tempora, aperiam facere provident laboriosam. Veniam sint fuga in excepturi velit quasi.
                       <span class="quote right">&rdquo;</span></blockquote>
                     </div>
@@ -365,16 +362,16 @@
                 </div>
               </div>
             </div>
-            <a class="left carousel-control" href="#reviewslider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#reviewslider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a class="left carousel-control" href="#reviewslider" data-slide="prev" title="slide left"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#reviewslider" data-slide="next" title="slide right"><span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>
       </section>
       <section class="section row instagallery">
         <div class="container-fluid">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xs-push-0 col-sm-push-0 col-md-push-0 col-xl-push-2 instagallery-header">
-            <h2 class="instagallery-title">OUR <br> INSTAGRAMM</h2>
-            <a href="#" class="btn btn-lg btn-filled">Subscribe</a>
+            <h2 class="instagallery-title">OUR <br> INSTAGRAM</h2>
+            <a href="https://instagram.com" class="btn btn-lg btn-filled">Subscribe</a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 gallery-item"><img src="./images/instagallery-1.png" alt="insta" class="gallery-thumbnail"></div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 gallery-item"><img src="./images/instagallery-1.png" alt="insta" class="gallery-thumbnail"></div>
@@ -392,74 +389,21 @@
       </section>
     </div>
     <footer class="container-fluid site-footer">
-      <section class="section row map">
+      <div class="section row map">
         <div id="map">
-        <script>
-            function initMap() {
-              var uluru = {lat: 55.74811, lng: 37.7644236};
-              var mapCenter = {lat: 55.74811, lng: 37.7664236};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 18,
-                center: mapCenter
-            });
-            var marker = './images/marker.png';
-            var marker = new google.maps.Marker({
-                position: uluru,
-                icon: marker,
-                map: map
-            });
-            var customStyled = [
-            {
-              "featureType": "poi",
-              "elementType": "labels.text",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.business",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.icon",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            }
-          ];
-          map.set('styles',customStyled);
-            }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
-      </section>
-      <section class="section row footer-navbar">
+        </div>
+      </div>
+      <div class="section row footer-navbar">
         <div class="container">
           <div class="navbar-header">
             <div class="navbar-brand">
-              <a class="brand-title" href="#">Fitness <br><span>CENTER</span></a>
+              <a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a>
             </div>
           </div>
           <div id="footerNavbar">
             <ul class="nav navbar-nav navbar-left">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
+              <li class="active"><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our trainers</a></li>
               <li><a href="./news.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
@@ -467,19 +411,19 @@
               <li><a href="./reviews.html">Reviews</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right social-navbar">
-              <li><a href="#" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
+              <li><a href="https://facebook.com" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
+              <li><a href="https://twitter.com" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
+              <li><a href="https://instagramm.com" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
+              <li><a href="https://youtube.com" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
     <div id='scripts' class="hidden ">
-      <script   src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
       <script>
       $(document).ready(function(){
         // touch events
@@ -623,6 +567,60 @@
         //   fallbacks.appendChild(bootstrap);
         // }
       </script>
+      <script>
+          function initMap() {
+            var uluru = {lat: 55.74811, lng: 37.7644236};
+            var mapCenter = {lat: 55.74811, lng: 37.7664236};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 18,
+              center: mapCenter
+          });
+          var marker = './images/marker.png';
+          var marker = new google.maps.Marker({
+              position: uluru,
+              icon: marker,
+              map: map
+          });
+          var customStyled = [
+          {
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }
+        ];
+        map.set('styles',customStyled);
+          }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
     </div>
   </body>
 </html>

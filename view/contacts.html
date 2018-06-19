@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{site.lang | default:en-US}}">
+<html lang="zxx">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,13 +22,10 @@
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
             <div class="navbar-brand">
-              <a class="brand-title" href="#">Fitness <br><span>CENTER</span></a>
+              <a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a>
             </div>
           </div>
           <div class="collapse navbar-collapse" id="topNavbar">
@@ -36,8 +33,8 @@
               <a href="tel:78342321251" class="navbar-tel tel-icon btn btn-lg btn-transparent">7(834)232-12-51</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our trainers</a></li>
               <li><a href="./news.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
@@ -66,7 +63,7 @@
       <section class="section row contacts-section">
         <div class="container contacts-container">
           <div class="contacts-header">
-            <div class="contacts-title">CONTACT INFO</div>
+            <h2 class="contacts-title">CONTACT INFO</h2>
           </div>
           <div class="contacts-wrapper">
             <ul class="contacts-list">
@@ -83,7 +80,7 @@
                 <label for="contactEmail">Your Email</label>
                 <input type="email" id="contactEmail">
                 <label for="contactMessage">Your Message</label>
-                <textarea name="" id="contactMessage" cols="30" rows="10" type="text"></textarea>
+                <textarea name="your-message" id="contactMessage" cols="30" rows="10"></textarea>
                 <button class="btn btn-lg btn-filled" id="contactSubmit" type="submit" name="send">Send</button>
               </div>
             </form>
@@ -92,74 +89,21 @@
       </section>
     </div>
     <footer class="container-fluid site-footer">
-      <section class="section row map">
+      <div class="section row map">
         <div id="map">
-        <script>
-            function initMap() {
-              var uluru = {lat: 55.74811, lng: 37.7644236};
-              var mapCenter = {lat: 55.74811, lng: 37.7664236};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 18,
-                center: mapCenter
-            });
-            var marker = './images/marker.png';
-            var marker = new google.maps.Marker({
-                position: uluru,
-                icon: marker,
-                map: map
-            });
-            var customStyled = [
-            {
-              "featureType": "poi",
-              "elementType": "labels.text",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.business",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.icon",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            }
-          ];
-          map.set('styles',customStyled);
-            }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
-      </section>
-      <section class="section row footer-navbar">
+        </div>
+      </div>
+      <div class="section row footer-navbar">
         <div class="container">
           <div class="navbar-header">
             <div class="navbar-brand">
-              <a class="brand-title" href="#">Fitness <br><span>CENTER</span></a>
+              <a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a>
             </div>
           </div>
           <div id="footerNavbar">
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="#">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our trainers</a></li>
               <li><a href="./news.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
@@ -167,19 +111,19 @@
               <li><a href="./reviews.html">Reviews</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right social-navbar">
-              <li><a href="#" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
+              <li><a href="https://facebook.com" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
+              <li><a href="https://twitter.com" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
+              <li><a href="https://instagramm.com" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
+              <li><a href="https://youtube.com" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
     <div id='scripts' class="hidden ">
       <script   src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
       <script>
         $(document).ready(function(){
           // touch events
@@ -292,6 +236,60 @@
         }
 
       </script>
+      <script>
+          function initMap() {
+            var uluru = {lat: 55.74811, lng: 37.7644236};
+            var mapCenter = {lat: 55.74811, lng: 37.7664236};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 18,
+              center: mapCenter
+          });
+          var marker = './images/marker.png';
+          var marker = new google.maps.Marker({
+              position: uluru,
+              icon: marker,
+              map: map
+          });
+          var customStyled = [
+          {
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }
+        ];
+        map.set('styles',customStyled);
+          }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
       <script>
         // var fallbacks = document.getElementById('scripts'),
         //        script = document.createElement('script');

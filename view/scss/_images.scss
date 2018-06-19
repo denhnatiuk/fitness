@@ -80,6 +80,24 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.reviews-hero{
+  background: url(../images/reviews-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.registration-hero{
+  background: url(../images/registration-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.err-hero{
+  background: url(../images/err-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .stats-row{
   &:before{
     content:'';

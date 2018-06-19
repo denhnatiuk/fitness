@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitness</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css" media='all'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/main.css" media='all'>
+    <!-- <link rel="stylesheet" href="/css/xs.css" media='screen and (max-width:576px)'>
+    <link rel="stylesheet" href="/css/sm.css" media='screen and (min-width:576px)'>
+    <link rel="stylesheet" href="/css/md.css" media='screen and (min-width:768px)'>
+    <link rel="stylesheet" href="/css/lg.css" media='screen and (min-width:992px)'>
+    <link rel="stylesheet" href="/css/xl.css" media='screen and (min-width:1200px)'> -->
+    <meta name="description" content="Fitness website template">
+    <meta name="keywords" content="fitness, health, sports">
+  </head>
+  <body class='template-404'>
+    <header class="site-header">
+      <nav class="navbar navbar-transparent">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavbar">
+              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="topNavbar">
+            <div class="navbar-left">
+              <a href="tel:78342321251" class="navbar-tel tel-icon btn btn-lg btn-transparent">7(834)232-12-51</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
+              <li><a href="./trainers.html">Our trainers</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./classes.html">Classes</a></li>
+              <li><a href="./contacts.html">Contacts</a></li>
+              <li><a href="./reviews.html">Reviews</a></li>
+              <hr id="nav_slide_hover">
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="main-content container-fluid">
+      <section class="section row err-hero page-hero">
+        <div class="container hero-caption">
+          <div class="breadcrumbs">
+            <a href="/index.html" class="home-link breadcrumbs-link">Home</a>
+            <span class="breadcrumbs-divider">&middot;</span>
+            <span class="breadcrumbs-current">404</span>
+          </div>
+          <h1 class="hero-title">404</h1>
+          <span class="hero-title-sub">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam accusamus architecto natus vero consequatur, minima mollitia, eos culpa impedit.
+          </span>
+        </div>
+      </section>
+      <section class="section row section-404">
+        <h1 class="title">404</h1>
+        <span class="title-sub"><span>OOPS</span>, PAGE NOT FOUND!</span>
+        <a href="./index.html" class="btn btn-lg btn-filled">Go Home</a>
+      </section>
+    </div>
+    <footer class="container-fluid site-footer">
+      <div class="section row map">
+        <div id="map">
+        </div>
+      </div>
+      <div class="section row footer-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="navbar-brand">
+              <a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a>
+            </div>
+          </div>
+          <div id="footerNavbar">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
+              <li><a href="./trainers.html">Our trainers</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./classes.html">Classes</a></li>
+              <li><a href="./contacts.html">Contacts</a></li>
+              <li class="active"><a href="./reviews.html">Reviews</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right social-navbar">
+              <li><a href="https://facebook.com" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
+              <li><a href="https://twitter.com" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
+              <li><a href="https://instagramm.com" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
+              <li><a href="https://youtube.com" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id='scripts' class="hidden ">
+      <script   src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          // touch events
+          $(".carousel").swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+              if (direction == 'left') $(this).carousel('next');
+              if (direction == 'right') $(this).carousel('prev');
+            },
+            allowPageScroll:"vertical"
+          });
+          // trainers carousel
+          $('#trainersCarousel .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            if (next.next().length>0) {
+              next.next().children(':first-child').clone().appendTo($(this));
+            }
+            else {
+              $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            }
+          });
+          $("#trainersCarousel").carousel({
+            interval:10000
+          });
+          // reviews carousel
+          $('#reviewslider .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+          });
+          $("#reviewslider").carousel({
+            interval:10000
+          });
+        });
+      </script>
+      <script>
+        /**
+        * If you have LESS than one navbar, then just do
+        * let menu = document.getElementsByClassName( 'nav' )[0];
+        */
+        let menu = document.getElementsByClassName( 'nav' );
+        // Values are set.
+        if ( menu ) {
+
+        // HOVER
+        let menu_slider_hover = document.getElementById( 'nav_slide_hover' );
+        if ( menu_slider_hover ) {
+          nav_slider( menu[0], function( el, width, tempMarginLeft ) {
+            el.onmouseover = () => {
+              menu_slider_hover.style.width =  width + '%';
+              menu_slider_hover.style.marginLeft = tempMarginLeft + '%';
+            }
+          });
+        }
+
+        // CLICK
+        let menu_slider_click = document.getElementById( 'nav_slide_click' );
+        if ( menu_slider_click ) {
+          nav_slider( menu[1], function( el, width, tempMarginLeft ) {
+            el.onclick = () => {
+              menu_slider_click.style.width =  width + '%';
+              menu_slider_click.style.marginLeft = tempMarginLeft + '%';
+            }
+          });
+        }
+
+        } // endif
+
+        function nav_slider( menu, callback ) {
+        let menu_width = menu.offsetWidth;
+        // We only want the <li> </li> tags
+        menu = menu.getElementsByTagName( 'li' );
+        if ( menu.length > 0 ) {
+          var marginLeft = [];
+          // Loop through nav children i.e li
+          [].forEach.call( menu, ( el, index ) => {
+            // Dynamic width/margin calculation for hr
+            var width = getPercentage( el.offsetWidth, menu_width );
+            var tempMarginLeft = 0;
+            // We don't want to modify first elements positioning
+            if ( index != 0 )  {
+              tempMarginLeft = getArraySum( marginLeft );
+            }
+            // Set mouse event  hover/click
+            callback( el, width, tempMarginLeft );
+            /* We store it in array because the later accumulated value is used for positioning */
+            marginLeft.push( width );
+          } );
+        }
+        }
+
+        // Might make this dynamic for px, %, pt, em
+        function getPercentage( min, max ) {
+        return min / max * 100;
+        }
+
+        // Not using reduce, because IE8 doesn't supprt it
+        function getArraySum( arr ) {
+        let sum = 0;
+        [].forEach.call( arr, ( el, index ) => {
+          sum += el;
+        } );
+        return sum;
+        }
+
+      </script>
+      <script>
+          function initMap() {
+            var uluru = {lat: 55.74811, lng: 37.7644236};
+            var mapCenter = {lat: 55.74811, lng: 37.7664236};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 18,
+              center: mapCenter
+          });
+          var marker = './images/marker.png';
+          var marker = new google.maps.Marker({
+              position: uluru,
+              icon: marker,
+              map: map
+          });
+          var customStyled = [
+          {
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }
+        ];
+        map.set('styles',customStyled);
+          }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
+      <script>
+        // var fallbacks = document.getElementById('scripts'),
+        //        script = document.createElement('script');
+        //
+        // if (!window.jQuery){
+        //    var jquery = './lib/jquery/dist/jquery.min.js';
+        //    script.setAttribute('src', jquery);
+        //    script.setAttribute('defer', "defer");
+        //    fallbacks.appendChild(script);
+        // }
+        // if (typeof(jQuery.fn.modal) !== 'undefined'){
+        //   var bootstrap = './lib/bootstrap/dist/js/bootstrap.min.js';
+        //   script.setAttribute('src', bootstrap);
+        //   script.setAttribute('defer', "defer");
+        //   fallbacks.appendChild(bootstrap);
+        // }
+      </script>
+    </div>
+  </body>
+</html>

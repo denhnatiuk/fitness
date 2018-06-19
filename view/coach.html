@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{site.lang | default:en-US}}">
+<html lang="zxx">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,22 +22,17 @@
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand">
-              <a class="brand-title" href="#">Fitness <br><span>CENTER</span></a>
-            </div>
+            <div class="navbar-brand"><a class="brand-title" href="./index.html">Fitness <br><span>CENTER</span></a></div>
           </div>
           <div class="collapse navbar-collapse" id="topNavbar">
             <div class="navbar-left">
               <a href="tel:78342321251" class="navbar-tel tel-icon btn btn-lg btn-transparent">7(834)232-12-51</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our Trainers</a></li>
               <li><a href="./news.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
@@ -55,7 +50,7 @@
           <div class="breadcrumbs">
             <a href="/index.html" class="home-link breadcrumbs-link">Home</a>
             <span class="breadcrumbs-divider">&middot;</span>
-            <span class="breadcrumbs-current">Our Trainers</span>
+            <a href="./trainers.html" class="breadcrumbs-link">Our Trainers</a>
             <span class="breadcrumbs-divider">&middot;</span>
             <span class="breadcrumbs-current">Victoria Kilman</span>
           </div>
@@ -81,15 +76,9 @@
                 <li class="feature">Number of students<span class="feature-value">25</span></li>
               </ul>
               <div class="trainers-stats">
-                <div class="stats-row">
-                  <span class="stat-label">Educability</span><span class="stat-value"data-size='95'></span>
-                </div>
-                <div class="stats-row">
-                  <span class="stat-label">Expirience</span><span class="stat-value"data-size='80'></span>
-                </div>
-                <div class="stats-row">
-                  <span class="stat-label">Skills</span><span class="stat-value"data-size='65'></span>
-                </div>
+                <div class="stats-row"><span class="stat-label">Educability</span><span class="stat-value" data-size='95'></span></div>
+                <div class="stats-row"><span class="stat-label">Expirience</span><span class="stat-value" data-size='80'></span></div>
+                <div class="stats-row"><span class="stat-label">Skills</span><span class="stat-value" data-size='65'></span></div>
               </div>
             </div>
           </div>
@@ -116,53 +105,17 @@
               <h3 class="title">Trainer Classes</h3>
               <table class="table classes-scedule">
                 <thead>
-                  <tr>
-                    <td>Kind of training</td>
-                    <td>Weekday</td>
-                    <td>Price</td>
-                  </tr>
+                  <tr><td>Kind of training</td><td>Weekday</td><td>Price</td></tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Fitness</td>
-                    <td>Monday</td>
-                    <td>$32.98</td>
-                  </tr>
-                  <tr>
-                    <td>Tenis</td>
-                    <td>Tuesday</td>
-                    <td>$12.98</td>
-                  </tr>
-                  <tr>
-                    <td>Box</td>
-                    <td>Sunday</td>
-                    <td>$91.23</td>
-                  </tr>
-                  <tr>
-                    <td>Fitness</td>
-                    <td>Monday</td>
-                    <td>$65.98</td>
-                  </tr>
-                  <tr>
-                    <td>Fitness</td>
-                    <td>Tuesday</td>
-                    <td>$32.98</td>
-                  </tr>
-                  <tr>
-                    <td>Tenis</td>
-                    <td>Monday</td>
-                    <td>$22.98</td>
-                  </tr>
-                  <tr>
-                    <td>Box</td>
-                    <td>Tuesday</td>
-                    <td>$42.98</td>
-                  </tr>
-                  <tr>
-                    <td>Fitness</td>
-                    <td>Friday</td>
-                    <td>$93.15</td>
-                  </tr>
+                  <tr><td>Fitness</td><td>Monday</td><td>$32.98</td></tr>
+                  <tr><td>Tenis</td><td>Tuesday</td><td>$12.98</td></tr>
+                  <tr><td>Box</td><td>Sunday</td><td>$91.23</td></tr>
+                  <tr><td>Fitness</td><td>Monday</td><td>$65.98</td></tr>
+                  <tr><td>Fitness</td><td>Tuesday</td><td>$32.98</td></tr>
+                  <tr><td>Tenis</td><td>Monday</td><td>$22.98</td></tr>
+                  <tr><td>Box</td><td>Tuesday</td><td>$42.98</td></tr>
+                  <tr><td>Fitness</td><td>Friday</td><td>$93.15</td></tr>
                 </tbody>
               </table>
             </div>
@@ -170,64 +123,10 @@
       </section>
     </div>
     <footer class="container-fluid site-footer">
-      <section class="section row map">
-        <div id="map">
-        <script>
-            function initMap() {
-              var uluru = {lat: 55.74811, lng: 37.7644236};
-              var mapCenter = {lat: 55.74811, lng: 37.7664236};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 18,
-                center: mapCenter
-            });
-            var marker = './images/marker.png';
-            var marker = new google.maps.Marker({
-                position: uluru,
-                icon: marker,
-                map: map
-            });
-            var customStyled = [
-            {
-              "featureType": "poi",
-              "elementType": "labels.text",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.business",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.icon",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            }
-          ];
-          map.set('styles',customStyled);
-            }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
-      </section>
-      <section class="section row footer-navbar">
+      <div class="section row map">
+        <div id="map"></div>
+      </div>
+      <div class="section row footer-navbar">
         <div class="container">
           <div class="navbar-header">
             <div class="navbar-brand">
@@ -237,7 +136,7 @@
           <div id="footerNavbar">
             <ul class="nav navbar-nav navbar-left">
               <li><a href="/">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
+              <!-- <li><a href="./about.html">About us</a></li> -->
               <li class="active"><a href="./trainers.html">Our trainers</a></li>
               <li><a href="./news.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
@@ -245,19 +144,19 @@
               <li><a href="./reviews.html">Reviews</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right social-navbar">
-              <li><a href="#" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
-              <li><a href="#" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
+              <li><a href="https://facebook.com" class="social-link" title="facebook"><span class="social-icon fb-icon"></span></a></li>
+              <li><a href="https://twitter.com" class="social-link" title="twitter"><span class="social-icon tw-icon"></span></a></li>
+              <li><a href="https://instagramm.com" class="social-link" title="instagram"><span class="social-icon insta-icon"></span></a></li>
+              <li><a href="https://youtube.com" class="social-link" title="youtube"><span class="social-icon youtube-icon"></span></a></li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
     <div id='scripts' class="hidden ">
       <script   src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
       <script>
         $(document).ready(function(){
           // touch events
@@ -401,6 +300,60 @@
           }
         }
       </script>
+      <script>
+          function initMap() {
+            var uluru = {lat: 55.74811, lng: 37.7644236};
+            var mapCenter = {lat: 55.74811, lng: 37.7664236};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 18,
+              center: mapCenter
+          });
+          var marker = './images/marker.png';
+          var marker = new google.maps.Marker({
+              position: uluru,
+              icon: marker,
+              map: map
+          });
+          var customStyled = [
+          {
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }
+        ];
+        map.set('styles',customStyled);
+          }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>
     </div>
   </body>
 </html>
