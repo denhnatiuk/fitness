@@ -84,4 +84,138 @@
       width:100%;
     }
   }
+  #trainersCarousel{
+    .item.active{
+      .item-inner{
+        width:50%;
+      }
+    }
+  }
+  .hero-caption:before {
+    display: none;
+  }
+  .site-header .navbar-transparent .container .navbar-header {
+    height:100px;
+    .navbar-brand{
+      .brand-title{
+        background: linear-gradient(to right, #0b3a9f 0%, #0b3a9f 40%, transparent 40%, transparent 100%);
+      }
+    }
+    .navbar-toggle{
+      border:1px solid #fff;
+      & .icon-bar{
+        background-color:  #fff;
+      }
+      &.collapsed{
+        border:1px solid #0b3a9f;
+        & .icon-bar{
+          background-color:  #0b3a9f;
+        }
+      }
+    }
+  }
+  .site-header .navbar-transparent .container .navbar-collapse.collapse{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding: 50px 30px 0;
+    text-align: right;
+    background-color:  #0b3a9f;
+    display: none;
+    &.in{
+      display: block;
+    }
+    .navbar-left{
+      display: none;
+    }
+    .nav li a{
+
+    }
+  }
+
+  #heroCarousel ~ .xs-index-hero{
+    padding:50px 15px;
+    .hero-title-sup{}
+    .hero-title{
+      margin:30px 0;
+      font-size: 24px;
+    }
+    .btn-filled{}
+  }
+  .news-feed{
+    .news-feed-header{
+      .section-title{
+        margin-bottom:0;
+      }
+      .btn-filled{
+        margin:0 0 45px 0;
+      }
+    }
+  }
+  .trainers-carousel{
+    .trainers-carousel-header{
+      position: relative;
+      z-index: 2;
+      width:1px;
+      .section-title{
+        margin-bottom: 150px;
+      }
+      .btn-filled{
+        position: absolute;
+        bottom:0;
+      }
+    }
+    #trainersCarousel{
+      .carousel-control{
+        background-image: none;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 60%;
+        &.left{
+          left:-55px;
+        }
+        &.right{
+          left:15px;
+          right:auto;
+        }
+      }
+    }
+  }
+  .reviews-carousel{
+    .reviews-header{
+      .reviews-title{
+        margin-bottom: 45px;
+      }
+    }
+    .container:nth-child(2){
+      padding:0;
+    }
+    #reviewslider{
+      .item{
+        .item-inner{
+          padding:0;
+          .well{
+            margin:45px 0 0 0;
+            height:auto;
+            .carousel-caption .reviewer{
+              text-align: right;
+              max-width:50%;
+              margin-left:50%;
+            }
+            .carousel-caption .reviewer-occupation
+            {
+              display: block;
+              margin:0;
+              width:100%;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -104,6 +104,12 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
+.xs-index-hero {
+  background: url(../images/heroSlide1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .banner aside.container .yoga-banner-header {
   background-image: url(../images/bnr-lg.png);
   background-size: 100%;
@@ -124,6 +130,12 @@ body {
 
 .news-hero {
   background: url(../images/news-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.banner {
+  background: url(../images/bnr-lg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -513,20 +525,20 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
         height: 2px;
         border-bottom: 2px solid #fff; }
 
-.banner aside.container .yoga-banner-header {
+aside.banner .container .yoga-banner-header {
   height: 395px;
   padding: 45px; }
-  .banner aside.container .yoga-banner-header .yoga-banner-title .title-caption {
+  aside.banner .container .yoga-banner-header .yoga-banner-title .title-caption {
     display: block; }
-  .banner aside.container .yoga-banner-header .btn-filled {
-    margin-top: 3rem;
+  aside.banner .container .yoga-banner-header .btn-filled {
+    margin-top: 2rem;
     padding: 0.5rem 1.5rem; }
 
 .reviews-carousel > .container {
   padding: 66px 15px 0; }
 
 .reviews-carousel .reviews-header .reviews-title {
-  width: 400px;
+  max-width: 400px;
   float: left;
   margin: 0;
   font-family: 'Lato-BlackItalic'; }
@@ -1668,13 +1680,18 @@ aside.sidebar-footer .widget_older_post {
   background-position: -200% center;
   transition: all .3s ease-in-out; }
 
-hr {
-  height: 0.4rem;
-  margin: 0;
-  border: none;
-  transition: .3s ease-in-out;
-  display: block;
-  transform: translateY(-22px);
+#primaryNav {
+  position: relative; }
+
+#magic-line {
+  position: absolute;
+  /* bottom: 0; */
+  top: 1.677rem;
+  left: 0;
+  padding: 0;
+  width: 100px;
+  height: 8px;
+  transform: translateX(15px);
   background: #0b3a9f; }
 
 .carousel.vertical .carousel-inner {
@@ -2017,7 +2034,85 @@ hr {
   .template-coach .section.row.coach-bio .trainer-bio .trainers-stats .stats-row {
     display: block; }
     .template-coach .section.row.coach-bio .trainer-bio .trainers-stats .stats-row .stat-label {
-      width: 100%; } }
+      width: 100%; }
+  #trainersCarousel .item.active .item-inner {
+    width: 50%; }
+  .hero-caption:before {
+    display: none; }
+  .site-header .navbar-transparent .container .navbar-header {
+    height: 100px; }
+    .site-header .navbar-transparent .container .navbar-header .navbar-brand .brand-title {
+      background: linear-gradient(to right, #0b3a9f 0%, #0b3a9f 40%, transparent 40%, transparent 100%); }
+    .site-header .navbar-transparent .container .navbar-header .navbar-toggle {
+      border: 1px solid #fff; }
+      .site-header .navbar-transparent .container .navbar-header .navbar-toggle .icon-bar {
+        background-color: #fff; }
+      .site-header .navbar-transparent .container .navbar-header .navbar-toggle.collapsed {
+        border: 1px solid #0b3a9f; }
+        .site-header .navbar-transparent .container .navbar-header .navbar-toggle.collapsed .icon-bar {
+          background-color: #0b3a9f; }
+  .site-header .navbar-transparent .container .navbar-collapse.collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 50px 30px 0;
+    text-align: right;
+    background-color: #0b3a9f;
+    display: none; }
+    .site-header .navbar-transparent .container .navbar-collapse.collapse.in {
+      display: block; }
+    .site-header .navbar-transparent .container .navbar-collapse.collapse .navbar-left {
+      display: none; }
+  #heroCarousel ~ .xs-index-hero {
+    padding: 50px 15px; }
+    #heroCarousel ~ .xs-index-hero .hero-title {
+      margin: 30px 0;
+      font-size: 24px; }
+  .news-feed .news-feed-header .section-title {
+    margin-bottom: 0; }
+  .news-feed .news-feed-header .btn-filled {
+    margin: 0 0 45px 0; }
+  .trainers-carousel .trainers-carousel-header {
+    position: relative;
+    z-index: 2;
+    width: 1px; }
+    .trainers-carousel .trainers-carousel-header .section-title {
+      margin-bottom: 150px; }
+    .trainers-carousel .trainers-carousel-header .btn-filled {
+      position: absolute;
+      bottom: 0; }
+  .trainers-carousel #trainersCarousel .carousel-control {
+    background-image: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 60%; }
+    .trainers-carousel #trainersCarousel .carousel-control.left {
+      left: -55px; }
+    .trainers-carousel #trainersCarousel .carousel-control.right {
+      left: 15px;
+      right: auto; }
+  .reviews-carousel .reviews-header .reviews-title {
+    margin-bottom: 45px; }
+  .reviews-carousel .container:nth-child(2) {
+    padding: 0; }
+  .reviews-carousel #reviewslider .item .item-inner {
+    padding: 0; }
+    .reviews-carousel #reviewslider .item .item-inner .well {
+      margin: 45px 0 0 0;
+      height: auto; }
+      .reviews-carousel #reviewslider .item .item-inner .well .carousel-caption .reviewer {
+        text-align: right;
+        max-width: 50%;
+        margin-left: 50%; }
+      .reviews-carousel #reviewslider .item .item-inner .well .carousel-caption .reviewer-occupation {
+        display: block;
+        margin: 0;
+        width: 100%;
+        text-align: right; } }
 
 @media screen and (min-width: 576px) {
   .well.classes-thumbnail {

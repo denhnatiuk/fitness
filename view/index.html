@@ -33,7 +33,7 @@
             <div class="navbar-left">
               <a href="tel:78342321251" class="navbar-tel tel-icon btn btn-lg btn-transparent">7(834)232-12-51</a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
+            <ul id="primaryNav" class="nav navbar-nav navbar-right">
               <li class="active"><a href="./index.html">Home</a></li>
               <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our trainers</a></li>
@@ -41,7 +41,7 @@
               <li><a href="./classes.html">Classes</a></li>
               <li><a href="./contacts.html">Contacts</a></li>
               <li><a href="./reviews.html">Reviews</a></li>
-              <hr id="nav_slide_hover">
+              <!-- <hr id="nav_slide_hover"> -->
             </ul>
           </div>
         </div>
@@ -49,7 +49,7 @@
     </header>
     <div class="main-content container-fluid">
       <section class="row hero-header">
-        <div id="heroCarousel" class="carousel vertical slide" data-ride="carousel">
+        <div id="heroCarousel" class="carousel vertical slide hidden-xs hidden-sm visible-md visible-lg" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#heroCarousel" data-slide-to="0" class=""></li>
             <li data-target="#heroCarousel" data-slide-to="1" class=""></li>
@@ -133,6 +133,13 @@
           </div>
           <a class="left carousel-control" href="#heroCarousel" data-slide="prev" aria-label="previous slide"><span class="glyphicon glyphicon-chevron-left"></span></a>
           <a class="right carousel-control" href="#heroCarousel" data-slide="next" aria-label="next slide"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+        <div class="xs-index-hero page-hero visible-xs visible-sm hidden-md hidden-lg">
+          <div class="container hero-caption">
+            <span class="hero-title-sup">With us you will be better</span>
+            <h1 class="hero-title">CHOOSE A TRAINER <br> WITH WHOM YOU WANT <br> TO BECOME A BETTER PERSON</h1>
+            <a href="./trainers.html" class="btn btn-lg btn-filled">Choose a trainer</a>
+          </div>
         </div>
       </section>
       <section class="section row">
@@ -425,6 +432,8 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
       <script>
+      var viewport = window.innerWidth;
+      console.log(viewport);
       $(document).ready(function(){
         // touch events
         $(".carousel").swipe({
@@ -440,101 +449,35 @@
           if (!next.length) {
             next = $(this).siblings(':first');
           }
-          next.children(':first-child').clone().appendTo($(this));
 
-          if (next.next().length>0) {
-            next.next().children(':first-child').clone().appendTo($(this));
+          if(viewport > 800){
+            next.children(':first-child').clone().appendTo($(this));
+            if (next.next().length>0) {
+              next.next().children(':first-child').clone().appendTo($(this));
+            }
+            else {
+            	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            }
           }
-          else {
-          	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-          }
+
         });
         $("#trainersCarousel").carousel({
           interval:10000
         });
         // reviews carousel
-        $('#reviewslider .item').each(function(){
-          var next = $(this).next();
-          if (!next.length) {
-            next = $(this).siblings(':first');
-          }
-          next.children(':first-child').clone().appendTo($(this));
-        });
+        if(viewport > 800){
+          $('#reviewslider .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+          });
+        }
         $("#reviewslider").carousel({
           interval:10000
         });
       });
-      </script>
-      <script>
-        /**
-        * If you have LESS than one navbar, then just do
-        * let menu = document.getElementsByClassName( 'nav' )[0];
-        */
-        let menu = document.getElementsByClassName( 'nav' );
-        // Values are set.
-        if ( menu ) {
-
-        // HOVER
-        let menu_slider_hover = document.getElementById( 'nav_slide_hover' );
-        if ( menu_slider_hover ) {
-          nav_slider( menu[0], function( el, width, tempMarginLeft ) {
-            el.onmouseover = () => {
-              menu_slider_hover.style.width =  width + '%';
-              menu_slider_hover.style.marginLeft = tempMarginLeft + '%';
-            }
-          });
-        }
-
-        // CLICK
-        let menu_slider_click = document.getElementById( 'nav_slide_click' );
-        if ( menu_slider_click ) {
-          nav_slider( menu[1], function( el, width, tempMarginLeft ) {
-            el.onclick = () => {
-              menu_slider_click.style.width =  width + '%';
-              menu_slider_click.style.marginLeft = tempMarginLeft + '%';
-            }
-          });
-        }
-
-        } // endif
-
-        function nav_slider( menu, callback ) {
-        let menu_width = menu.offsetWidth;
-        // We only want the <li> </li> tags
-        menu = menu.getElementsByTagName( 'li' );
-        if ( menu.length > 0 ) {
-          var marginLeft = [];
-          // Loop through nav children i.e li
-          [].forEach.call( menu, ( el, index ) => {
-            // Dynamic width/margin calculation for hr
-            var width = getPercentage( el.offsetWidth, menu_width );
-            var tempMarginLeft = 0;
-            // We don't want to modify first elements positioning
-            if ( index != 0 )  {
-              tempMarginLeft = getArraySum( marginLeft );
-            }
-            // Set mouse event  hover/click
-            callback( el, width, tempMarginLeft );
-            /* We store it in array because the later accumulated value is used for positioning */
-            marginLeft.push( width );
-          } );
-        }
-        }
-
-        // Might make this dynamic for px, %, pt, em
-        function getPercentage( min, max ) {
-        return min / max * 100;
-        }
-
-        // Not using reduce, because IE8 doesn't supprt it
-        function getArraySum( arr ) {
-        let sum = 0;
-        [].forEach.call( arr, ( el, index ) => {
-          sum += el;
-        } );
-        return sum;
-        }
-
       </script>
       <script>
         // trainers stats script
@@ -566,6 +509,44 @@
         //   script.setAttribute('defer', "defer");
         //   fallbacks.appendChild(bootstrap);
         // }
+      </script>
+      <script>
+      $(document).ready(function(){
+        $(function() {
+            var $el, leftPos, newWidth,
+                $mainNav = $('#primaryNav');
+            console.log($mainNav);
+            $mainNav.append("<li id='magic-line'></li>");
+            var $magicLine = $("#magic-line");
+            if($('#nav li').hasClass('active')) {
+                $magicLine
+                    .css({
+                        "left": $('#primaryNav').find("li.active").position().left,
+                        "width": $('#primaryNav li.active a').width()
+                    }).data("origLeft", $magicLine.position().left);
+            } else {
+                $magicLine
+                    .css({
+                        "left": -9999,
+                        "width": $('#primaryNavli:first a').width()
+                    }).data("origLeft", $magicLine.position().left);
+            }
+            $('#primaryNav').find("li:not(#magic-line)").hover(function() {
+                $el = $(this);
+                leftPos = $el.position().left;
+                newWidth = $el.children().width();
+                $magicLine.stop().animate({
+                    left: leftPos,
+                    width: newWidth
+                });
+            }, function() {
+                $magicLine.stop().animate({
+                    left: $magicLine.data("origLeft"),
+                    width: $('#primaryNav li.active a').width()
+                });
+            });
+        });
+      });
       </script>
       <script>
           function initMap() {

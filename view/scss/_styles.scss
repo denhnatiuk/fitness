@@ -313,9 +313,8 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
     }
   }
 }
-
-.banner{
-  aside.container{
+aside.banner{
+  .container{
     .yoga-banner-header{
       height: 395px;
       padding: 45px;
@@ -326,7 +325,7 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
         }
       }
       .btn-filled{
-        margin-top: 3rem;
+        margin-top: 2rem;
         padding:0.5rem 1.5rem;
       }
     }
@@ -338,7 +337,7 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
   }
   .reviews-header{
     .reviews-title{
-      width:400px;
+      max-width:400px;
       float: left;
       margin:0;
       font-family: 'Lato-BlackItalic';
