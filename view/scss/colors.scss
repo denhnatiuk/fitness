@@ -1,9 +1,441 @@
-$grayBg: #f1f2f4;
-
+$colorScheme:('#f1f2f4', '#0b3a9f', '#bababa', '#fff', '#000');
+$background: #f1f2f4;
+$brand: #0b3a9f;
+$darkGray: #bababa;
+$white: #fff;
+$black:#000;
 
 body{
-  background-color: $grayBg;
+  background-color: $background;
 }
 .trainers-carousel-header h2{
+  color:$white;
+}
+// buttons
+.btn-transparent{
+  background-color: transparent;
+}
+.btn-border{
+  background-color: transparent;
+  color:$white;
+  border:1px solid $white;
+  border-radius: 0;
+  &:hover{
+    color:$white;
+  }
+}
+.btn-filled{
+  background-color: $brand;
+  color:$white;
+  border: 0;
+  border-radius: 0;
+  &:hover{
+    color:$white;
+  }
+}
+.well.classes-thumbnail.classes-header .btn-transparent{
+  border-top:1px solid $background;
+}
+.well.classes-thumbnail.classes-header .btn-transparent:after{
+  border-right:2px solid $brand;
+  border-bottom:2px solid $brand;
+}
+#trainersCarousel .carousel-control.left,
+#trainersCarousel .carousel-control.right {
+  border:1px solid $white;
+  border-radius: 50%;
+}
+// overlays
+a.well.classes-thumbnail .classes-thumbnail--overlay{
+  background: linear-gradient(to top, transparentize($brand, .5) 0, transparentize($brand, .5) 100%);
+  filter:saturate(2.5);
+}
+#trainersCarousel .carousel-inner .item .item-inner img ~ .carousel-caption{
+      color: $white;
+      text-shadow: 0 1px 2px transparentize($black, .5);
+      background-color: $brand;
+      border:1px solid $white;
+      outline: 10px solid $brand;
+}
+
+
+
+#reviewslider{
+  .carousel-inner .item .item-inner{
+    img{
+      border:10px solid $background;
+      border-radius: 50%;
+    }
+    .well  .carousel-caption{
+      text-shadow: none;
+      color:#000;
+      .reviewer-occupation{
+        color: $darkGray;
+      }
+      blockquote{
+        .quote{
+          color:$darkGray;
+        }
+      }
+    }
+  }
+  .carousel-control{
+    border:1px solid $black;
+    border-radius: 50%;
+    color:#000;
+    text-shadow: none;
+  }
+}
+.news-feed .news-item .news-item-description{
+    background: linear-gradient( to top, transparentize($black, .7) 0%, transparent 100%);
+    color:$white;
+    & .meta:after{
+        border-bottom: 2px solid $white;
+  }
+}
+.instagallery .instagallery-header{
+    background-color: $background;
+}
+.site-footer{
+  background-color: #1f1f1f;
   color:#fff;
+  .brand-title{
+    color:#fff;
+    background-color: #0b3a9f;
+  }
+  #footerNavbar{
+    ul li a{
+      color:#fff;
+      &:hover{
+        background-color: #0b3a9f;
+        color:#fff;
+      }
+    }
+    .social-link:hover{
+      background-color: inherit;
+    }
+  }
+  .social-navbar .social-icon{
+      background-color: #fff;
+      color:#1f1f1f;
+      border-radius:50%;
+      &:hover{
+        background-color:#1f1f1f;
+        color: #fff;
+      }
+  }
+}
+.hero-caption:before{
+    background-color: $brand;
+}
+.page-hero{
+  .container{
+    color:$white;
+  }
+  .breadcrumbs{
+    a{
+      color:$white;
+    }
+    .breadcrumbs-divider{
+      color:$white;
+    }
+    .breadcrumbs-current{
+      color:$white;
+    }
+  }
+}
+.section.trainers-list{
+  .trainers-item{
+    background-color: $white;
+    &:nth-child(2n+2){
+      background-color: $background;
+    }
+    .trainers-name{
+      color:$brand;
+      span{
+        color:#000;
+      }
+    }
+    .trainers-stats .stats-row .stat-value>.stat-length{
+      background-color: $brand;
+    }
+  }
+}
+#secondary{
+  .widget_recent_entries{
+    .widget-title{
+      &:before{
+        border-bottom: 2px solid $brand;
+      }
+      &:after{
+        border-bottom: 2px solid $darkGray;
+      }
+    }
+    ul li a{
+      color:$black;
+      .meta .posted-on .entry-date{
+        color: $darkGray;
+      }
+    }
+  }
+  .widget_tags{
+    .widget-title{
+      &:before{
+        border-bottom: 2px solid $brand;
+      }
+      &:after{
+        border-bottom: 2px solid $darkGray;
+      }
+    }
+  }
+  .widget_mc_mm_widget .mailchimb-widget{
+    color:$white;
+    .mailchimb-form input[type="email"]{
+      border:1px solid $brand;
+      border-radius: 0;
+      background: transparent;
+      &::placeholder{
+        color:$white;
+      }
+    }
+  }
+}
+.entry-meta{
+  .byline{
+    color:$darkGray;
+    a{
+      color:$darkGray;
+    }
+  }
+  .posted-on{
+    color:$darkGray;
+    a{
+      color:$darkGray;
+    }
+  }
+}
+.entry-content{
+  blockquote{
+    border-left:5px solid $brand;
+    background-color: $white;
+    span.quote.left{
+      color:$background;
+    }
+  }
+}
+aside.sidebar-footer{
+  .widget_tags_text{
+    .tag-item{
+      color:$black;
+    }
+  }
+  .widget_repost_news{
+    .social-icon{
+      background-color: $darkGray;
+      color:$white;
+      border-radius:50%;
+      &:hover{
+        color: $white;
+        background-color: $brand;
+      }
+    }
+  }
+  .widget_older_post{
+    border-top: 1px solid $darkGray;
+    border-bottom: 1px solid $darkGray;
+    a{
+      color:$black;
+    }
+  }
+}
+#comments{
+  .comment-list{
+    .comment{
+      border:1px solid $darkGray;
+    }
+  }
+  .comment-respond{
+    .comment-form{
+      p {
+        input{
+          background-color: $white;
+        }
+      }
+      .comment-form-comment{
+        textarea{
+          background-color: $white;
+        }
+      }
+      .form-submit{
+        .submit{
+          background-color: $brand;
+        }
+      }
+    }
+  }
+}
+.template-coach .section.row.coach-bio{
+  .trainer-bio{
+    .trainers-name{
+      color:$brand;
+      span{
+        color:$black;
+      }
+    }
+  }
+  .trainers-stats .stats-row .stat-value>.stat-length{
+    background-color: $brand;
+  }
+  .trainer-classes{
+    .table{
+      thead{
+        color: $white;
+        background-color: $brand;
+      }
+      tbody tr:hover{
+        background-color: transparentize($darkGray, .5);
+      }
+    }
+  }
+}
+.template-classes{
+  .section.gender-filter{
+    color:$white;
+    .filter-male{
+      border:2px solid $white;
+      outline:15px solid $brand;
+      background-color: $brand;
+    }
+    .filter-female{
+      border:2px solid $white;
+      outline:15px solid $brand;
+      background-color: $brand;
+    }
+  }
+  .section.classes-list div ul li.active{
+    background-color: $brand;
+    border:1px solid $white;
+    outline:3px solid $brand;
+  }
+}
+.training-bio .trainers-stats .stats-row .stat-value>.stat-length{
+  background-color: $brand;
+}
+.training-info{
+  .schedule{
+    .tabs-wrapper{
+      input[name='tab']:checked+label{
+        color:$white;
+        background-color: $brand;
+        border:1px solid $white;
+        outline:3px solid $brand;
+      }
+      .tab-content{
+        input[name='time']:disabled+label{
+          color:transparentize($darkGray, .25);
+        }
+      }
+    }
+  }
+  .gallery-wrapper{
+    .gallery-item-wrapper{
+      .gallery-item-overlay{
+        background: linear-gradient(to top, transparentize($brand, .8) 0, transparentize($brand, .5) 100%);
+        filter:saturate(2.5);
+      }
+    }
+  }
+}
+.template-reviews .reviews .review-item .item-inner{
+  img{
+    border:10px solid $background;
+    border-radius: 50%;
+  }
+  .well{
+    .carousel-caption{
+      color:$black;
+      text-shadow: none;
+      .reviewer-occupation{
+        color: $darkGray;
+      }
+      blockquote{
+        .quote{
+          &.left{
+            color: $darkGray;
+          }
+          &.right{
+            color: $darkGray;
+          }
+        }
+      }
+    }
+  }
+}
+.pagination div ul li.active{
+  background-color: $brand;
+  border:1px solid $white;
+  outline:3px solid $brand;
+  a{
+    color:$white;
+  }
+}
+#registration .input-group label span {color:#f00;}
+#registration .input-group select:focus,
+#registration .input-group input:focus,
+#registration .input-group textarea:focus {outline:1px solid $brand;}
+.section-404{
+  .title{
+    color:$brand;
+  }
+  .title-sub span{
+      color:$brand;
+  }
+}
+.template-contacts{
+  .contacts-section{
+    .contacts-container{
+      background-color: $white;
+      .contacts-header{
+        .contacts-title{
+          color: $black;
+        }
+      }
+      .contacts-wrapper{
+        .contacts-list{
+          .contacts-item{
+            .contacts-link{
+              color: $black;
+              .tel{
+                &:before{
+                  color: $brand;
+                }
+              }
+              .address{
+                &:before{
+                  color: $brand;
+                }
+              }
+              .email{
+                &:before{
+                  color: $brand;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contactform-wrapper{
+        #contactForm{
+          .input-group{
+            input{
+              background-color: $background;
+            }
+            textarea{
+              background-color: $background;
+            }
+          }
+        }
+      }
+    }
+  }
 }

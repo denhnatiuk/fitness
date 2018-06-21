@@ -15,14 +15,3 @@
 @import "md"; // min-width:768px
 @import "lg"; // min-width:992px
 @import "xl"; // min-width:1200px
-
-.classes-thumbnail img{
-  max-width:340px;
-}
-img:after{
-  content:"title";
-}
-
-.section-expand{
-  min-height: 100vh;
-}

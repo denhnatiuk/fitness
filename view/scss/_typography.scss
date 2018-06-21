@@ -2,6 +2,22 @@ html, body{
   font-family: 'Lato-Regular';
   font-size: 16px;
 }
+// headers
+.hero-title{
+      font-family: 'Lato-Black';
+      font-size: 50px;
+}
+// subheaders
+.hero-title-sup{
+      font-family: 'Lato-Regular';
+      font-size: 20px;
+}
+
+
+.reviews-carousel .reviews-header .reviews-title{
+      font-family: 'Lato-BlackItalic';
+}
+
 #trainersCarousel .carousel-inner .item .carousel-caption h3{
   font-family: 'Lato-Bold';
   font-size: 25px;
@@ -30,5 +46,401 @@ html, body{
         }
       }
     }
+  }
+}
+#reviewslider{
+  .carousel-inner{
+    .item{
+      .item-inner{
+        .well{
+          .carousel-caption{
+            text-align: left;
+            .reviewer{
+              font-family: 'Lato-Bold';
+            }
+            .reviewer-occupation{
+              font-family: 'Lato-Regular';
+            }
+            blockquote{
+              font-family: 'Lato-Light';
+              font-size: 18px;
+              line-height: 24px;
+              .quote{
+                font-size: 60px;
+                line-height: 0px;
+                &.left{
+                  text-indent: -20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.instagallery .instagallery-header .instagallery-title{
+      font-family: 'Lato-BlackItalic';
+      font-size: 35px;
+}
+.site-footer{
+  .brand-title{
+    font-family: 'Lato-Regular';
+    font-size: 26px;
+  }
+  .social-navbar .social-icon{
+      &.insta-icon:before {
+        content: '\f16d';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        padding-left: 5px;
+      }
+      &.tw-icon:before {
+        content: '\f099';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        padding-left: 5px;
+      }
+      &.fb-icon:before {
+        content: '\f09a';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        padding-left: 7px;
+      }
+      &.youtube-icon:before {
+        content: '\f167';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        padding-left: 5px;
+      }
+  }
+}
+.page-hero  .breadcrumbs  a{
+      text-decoration:none;
+}
+.section.trainers-list{
+  .trainers-item{
+    .trainers-name{
+      font-family: 'Lato-BlackItalic';
+      font-size: 35px;
+    }
+    .trainers-motto{
+      font-family: 'Lato-Regular';
+      font-size: 20px;
+    }
+    .description{
+      font-family: 'Lato-Light';
+      font-size: 16px;
+    }
+    .trainers-stats{
+      .stats-row{
+        .stat-label{
+          font-family: 'Lato-Bold';
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+#secondary{
+  .widget_recent_entries ul li a{
+          text-decoration: none;
+  }
+  .widget_mc_mm_widget .mailchimb-widget{
+    text-align: center;
+    .mailchimb-form input[type="email"]{
+      text-align: center;
+    }
+  }
+}
+.entry-meta{
+  line-height: 33px;
+  .byline{
+    &:before{
+      content:'\f040';
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      padding-left: 5px;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+  .posted-on{
+    &:before{
+      content:'\f073';
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+}
+.entry-content{
+  p{
+    font-family: 'Lato-Light';
+    font-size: 16px;
+  }
+  blockquote{
+    font-family: 'Lato-LightItalic';
+    span.quote.left{
+      font-size: 92px;
+    }
+  }
+}
+aside.sidebar-footer{
+  .widget_tags_text{
+    font-family: 'Lato-Bold';
+    .widget-title{
+      font-size: 20px;
+    }
+    .tag-item{
+      font-size: 18px;
+      text-decoration: none;
+    }
+  }
+  .widget_repost_news{
+    .widget-title{
+      font-family: 'Lato-Bold';
+      font-size: 16px;
+    }
+    .social-icon{
+      &.insta-icon:before {
+        content: '\f16d';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+      &.tw-icon:before {
+        content: '\f099';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+      &.fb-icon:before {
+        content: '\f09a';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+    }
+  }
+  .widget_older_post{
+    a{
+      font-family: 'Lato-Bold';
+      font-size: 16px;
+      &:before{
+        content:'\f104';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+#comments{
+  .comments-title{
+    font-family: 'Lato-Bold';
+    font-size: 25px;
+  }
+  .comment-respond{
+    .comment-reply-title{
+      font-family: 'Lato-Bold';
+      font-size: 25px;
+    }
+  }
+}
+.template-coach{
+  .section.row.coach-bio{
+    .trainer-bio{
+      .trainers-name{
+        font-family: 'Lato-BlackItalic';
+        font-size: 35px;
+      }
+      .trainers-motto{
+        font-family: 'Lato-Regular';
+        font-size: 20px;
+      }
+      .description{
+        font-family: 'Lato-Light';
+        font-size: 16px;
+      }
+      .trainers-stats{
+        .stats-row{
+          .stat-label{
+            font-family: 'Lato-Bold';
+            font-size:16px;
+          }
+        }
+      }
+    }
+    .trainers-career{
+      .title{
+        font-family: 'Lato-Bold';
+        font-size: 25px;
+      }
+      .career-description{
+        font-family: 'Lato-Light';
+        font-size: 16px;}
+      .career-stages{
+        .career-stage{
+          .stage-title{
+              font-family: 'Lato-Bold';
+              font-size: 16px;
+          }
+          .stage-description{
+              font-family: 'Lato-Light';
+              font-size: 16px;
+          }
+        }
+      }
+    }
+    .trainer-classes{
+      .title{
+        font-family: 'Lato-Bold';
+        font-size: 25px;
+      }
+      .table{
+        thead{
+          font-family: 'Lato-Bold';
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.template-classes .section.gender-filter .filter-male{
+  .filter-title{
+    text-align: right;
+  }
+  .description{
+    text-align: right;
+  }
+}
+.training-bio{
+  .trainers-name{
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px;
+  }
+  .description{
+    font-family: 'Lato-Light';
+    font-size: 16px;
+  }
+  .training-header{
+    font-family: 'Lato-Bold';
+    font-size: 25px;
+  }
+  .trainers-stats{
+    .stats-row{
+      .stat-label{
+        font-family: 'Lato-Bold';
+        font-size:16px;
+      }
+    }
+  }
+}
+.training-info{
+  .coach-bio{
+    .coach-name{
+      font-family: 'Lato-Bold';
+      font-size: 25px;
+    }
+    .coach-motto{
+      font-family: 'Lato-Regular';
+      font-size: 20px;
+    }
+    .description{
+      font-family: 'Lato-Light';
+      font-size: 16px;
+    }
+  }
+  .schedule{
+    .title{
+      font-family: 'Lato-Bold';
+      font-size: 25px;
+    }
+    .tabs-wrapper{
+      .tab-content{
+        input[name='time']+label{
+          font-family: 'Lato-Light';
+          font-size: 16px;
+        }
+        input[name='time']:checked+label{
+          text-decoration: underline;
+          font-family: 'Lato-Black';
+        }
+      }
+    }
+    #scheduleSubmit{
+      font-family: 'Lato-Regular';
+      font-size: 15px;
+    }
+  }
+  .title{
+    font-family: 'Lato-Bold';
+    font-size: 25px;
+  }
+}
+.template-reviews .reviews .review-item .item-inner .well .carousel-caption{
+  text-align: left;
+  .reviewer{
+    font-family: 'Lato-BoldItalic';
+    text-transform: uppercase;
+  }
+  .reviewer-occupation{
+    font-family: 'Lato-Regular';
+  }
+  blockquote{
+    font-family: 'Lato-Light';
+    font-size: 18px;
+    line-height: 24px;
+    .quote{
+    font-size: 60px;
+    line-height: 0px;
+      &.left{
+        text-indent: -20px;
+      }
+    }
+  }
+}
+#registration{
+  .registration-title{
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px;
+  }
+  .description{
+    font-family: 'Lato-Light';
+    font-size: 16px;
+  }
+  .input-group{
+    font-family: 'Lato-Light';
+    font-size: 16px;
+  }
+}
+.section-404{
+  .title{
+    font-family: 'Lato-Black';
+    font-size: 114px;
+  }
+  .title-sub{
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px;
   }
 }

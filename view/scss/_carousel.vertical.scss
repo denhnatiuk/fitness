@@ -9,23 +9,23 @@
       filter:brightness(0.5);
     }
     @media all and (transform-3d), (-webkit-transform-3d) {
-      transition: 0.6s ease-in-out;
-      &.next,
-      &.active.right {
-        transform: translate3d(0, 100%, 0);
-        top: 0;
-      }
-      &.prev,
-      &.active.left {
-        transform: translate3d(0, -100%, 0);
-        top: 0;
-      }
-      &.next.left,
-      &.prev.right,
-      &.active {
-        transform: translate3d(0, 0, 0);
-        top: 0;
-      }
+        transition: 0.6s ease-in-out;
+        &.next,
+        &.active.right {
+          transform: translate3d(0, 100%, 0);
+          top: 0;
+        }
+        &.prev,
+        &.active.left {
+          transform: translate3d(0, -100%, 0);
+          top: 0;
+        }
+        &.next.left,
+        &.prev.right,
+        &.active {
+          transform: translate3d(0, 0, 0);
+          top: 0;
+        }
     }
   }
   > .active,

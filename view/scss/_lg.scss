@@ -16,4 +16,8 @@
       }
     }
   }
+  .classes-man .well.classes-thumbnail:nth-child(4),
+  .classes-woman .well.classes-thumbnail:nth-child(4){
+    display: none;
+  }
 }

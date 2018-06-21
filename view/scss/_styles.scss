@@ -1,54 +1,31 @@
+// buttons
 .btn-transparent{
   display: block;
-  background-color: transparent;
 }
 .btn-border{
   // display: block;
-  background-color: transparent;
-  color:#fff;
-  border:1px solid #fff;
-  border-radius: 0;
   &:hover{
-    color:#fff;
     text-decoration: none;
     cursor: pointer;
   }
 }
 .btn-filled{
-  background-color: #0b3a9f;
-  color:#fff;
-  border: 0;
-  border-radius: 0;
   &:hover{
-    color:#fff;
     text-decoration: none;
     cursor: pointer;
   }
 }
+
 .hero-title-sup{
-      font-family: 'Lato-Regular';
-      font-size: 20px;
       z-index: 5;
 }
 .hero-title{
-      font-family: 'Lato-Black';
-      font-size: 50px;
       & ~ .btn-border{
         margin-top: 3rem;
         padding:1rem 2.25rem;
       }
 }
-#heroCarousel:before{
-      // content:'';
-      // display: block;
-      // width: 170px;
-      // margin-left: -116px;
-      // height:300px;
-      // background: rgba(11, 58, 159, 1);
-      // position: absolute;
-      // z-index: -1;
-      // top:-200px;
-}
+
 .classes-man, .classes-woman{
   display: flex;
   flex-direction: row;
@@ -63,7 +40,6 @@
   text-align: left;
   left:20px;
   right:20px;
-  border-top:1px solid #e5e5e5;
   position: absolute;
   bottom:10px;
 }
@@ -75,8 +51,6 @@
   display: block;
   width:0.5rem;
   height:0.5rem;
-  border-right:2px solid #0b3a9f;
-  border-bottom:2px solid #0b3a9f;
   transform: rotate(-45deg);
 }
 .section-icon{
@@ -103,8 +77,6 @@ a.well.classes-thumbnail .classes-thumbnail--overlay{
   width:100%;
   height: 0;
   opacity:0;
-  background: linear-gradient(to top, rgba(11, 58, 159, .5) 0, rgba(11, 58, 159, .5) 100%);
-  filter:saturate(2.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,8 +89,6 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
 }
 // carousel trainers
 .trainers-carousel{
-  background: url(../images/trainers_section.png);
-  background-size: contain;
   margin-top: 95px;
   height: 295px;
 }
@@ -156,17 +126,27 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
 #trainersCarousel .carousel-inner .item.right.active {
   transform: translateX(33%);
 }
-
 #trainersCarousel .carousel-inner .item.next {
   transform: translateX(33%)
 }
 #trainersCarousel .carousel-inner .item.prev {
   transform: translateX(-33%)
 }
-
+@media screen and (max-width:576px){
+  #trainersCarousel .carousel-inner .item.next {
+    transform: translateX(150%);
+  }
+  #trainersCarousel .carousel-inner .item.prev {
+    transform: translateX(50%);
+  }
+  #trainersCarousel .carousel-inner .item.right,
+  #trainersCarousel .carousel-inner .item.left {
+    transform: translateX(0);
+  }
+}
 #trainersCarousel .carousel-inner .item.right,
 #trainersCarousel .carousel-inner .item.left {
-  transform: translateX(0);
+  transform: translateX(33%);
 }
 #trainersCarousel .carousel-inner .item .item-inner{
   position: relative;
@@ -190,13 +170,8 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
       bottom: 20%;
       top:30%;
       left: auto;
-      color: #fff;
       text-align: center;
-      text-shadow: 0 1px 2px rgba(0,0,0,.6);
       display: block;
-      background-color: #0b3a9f;
-      border:1px solid #fff;
-      outline: 10px solid #0b3a9f;
     }
   }
 }
@@ -217,8 +192,6 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
 #trainersCarousel .carousel-control.left,
 #trainersCarousel .carousel-control.right {
   background-image:none;
-  border:1px solid #fff;
-  border-radius: 50%;
   width:2rem;
   height:2rem;
   position: absolute;
@@ -277,7 +250,6 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
       align-self: flex-start;
     }
     &:last-child{
-      // margin-right:0;
       align-self: flex-end;
     }
   }
@@ -297,8 +269,6 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
     bottom:0;
     z-index: 2;
     padding: 15px;
-    background: linear-gradient( to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-    color:#fff;
     & .meta{
       position: relative;
       display: inline;
@@ -308,7 +278,6 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
         display: block;
         margin: 0 50% 0 0;
         height:2px;
-        border-bottom: 2px solid #fff;
       }
     }
   }
@@ -340,7 +309,6 @@ aside.banner{
       max-width:400px;
       float: left;
       margin:0;
-      font-family: 'Lato-BlackItalic';
     }
     .btn-filled{
       float: right;
@@ -357,11 +325,9 @@ aside.banner{
         img{
           width:133px;
           height:133px;
-          border-radius: 50%;
           position: absolute;
           top:0;
           left:15px;
-          border:10px solid #f1f2f4;
           z-index: 2;
         }
         .well{
@@ -369,34 +335,24 @@ aside.banner{
           margin-left: 75px;
           margin-top: 75px;
           margin-right: 15px;
-          height:375px;
+          // height:375px;
           .carousel-caption{
             position: relative;
             right:0;
             left:0;
-            text-shadow: none;
-            color:#000;
             text-align: left;
             .reviewer{
               margin-left: 50px;
               margin-top: 0;
-              font-family: 'Lato-Bold';
             }
             .reviewer-occupation{
               margin-left: 50px;
-              font-family: 'Lato-Regular';
             }
             blockquote{
-              font-family: 'Lato-Light';
-              font-size: 18px;
-              line-height: 24px;
               border:0;
               .quote{
                 display: inline-block;
-                font-size: 60px;
-                line-height: 0px;
                 &.left{
-                  text-indent: -20px;
                   transform: translateY(23px);
                 }
                 &.right{
@@ -417,9 +373,6 @@ aside.banner{
     width:2rem;
     height:2rem;
     background: none;
-    border:1px solid #000;
-    border-radius: 50%;
-    color:#000;
     &.right {
       right:-10px;
       & span{
@@ -442,11 +395,6 @@ aside.banner{
   padding-bottom: 35px;
   .instagallery-header{
     z-index: 2;
-    background-color: #f1f2f4;
-    .instagallery-title{
-      font-family: 'Lato-BlackItalic';
-      font-size: 35px;
-    }
   }
   .gallery-item{
     overflow:hidden;
@@ -461,10 +409,7 @@ aside.banner{
   height:300px;
 }
 .site-footer{
-  background-color: #1f1f1f;
-  color:#fff;
   .brand-title{
-    color:#fff;
     top:-62px;
     display: block;
     box-sizing: border-box;
@@ -474,23 +419,8 @@ aside.banner{
     right: 0;
     height: 100px;
     z-index: 10;
-    background-color: #0b3a9f;
-    font-family: 'Lato-Regular';
-    font-size: 26px;
     &:before{
       display: none;
-    }
-  }
-  #footerNavbar{
-    ul li a{
-      color:#fff;
-      &:hover{
-        background-color: #0b3a9f;
-        color:#fff;
-      }
-    }
-    .social-link:hover{
-      background-color: inherit;
     }
   }
   .social-navbar .social-icon{
@@ -498,46 +428,7 @@ aside.banner{
       width:1.5rem;
       height:1.5rem;
       box-sizing: border-box;
-      background-color: #fff;
-      color:#1f1f1f;
-      border-radius:50%;
       padding-top: 2px;
-      &:hover{
-        background-color:#1f1f1f;
-        color: #fff;
-      }
-      &.insta-icon:before {
-        content: '\f16d';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        padding-left: 5px;
-      }
-      &.tw-icon:before {
-        content: '\f099';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        padding-left: 5px;
-      }
-      &.fb-icon:before {
-        content: '\f09a';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        padding-left: 7px;
-      }
-      &.youtube-icon:before {
-        content: '\f167';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        padding-left: 5px;
-      }
   }
 }
 .hero-caption{
@@ -547,7 +438,6 @@ aside.banner{
     display: block;
     width: 170px;
     height:400px;
-    background-color: #0b3a9f;
     position:absolute;
     z-index: -1;
     top:0;
@@ -561,24 +451,12 @@ aside.banner{
     min-height: 470px;
     padding-top: 200px;
     padding-bottom:70px;
-    color:#fff;
   }
   .breadcrumbs{
     padding:15px 0;
     max-width:50%;
     z-index: 5;
     margin-left: 100px;
-    a{
-      text-decoration:none;
-      color:#fff;
-    }
-    .home-link{}
-    .breadcrumbs-divider{
-      color:#fff;
-    }
-    .breadcrumbs-current{
-      color:#fff;
-    }
   }
   h1.hero-title{
     width:425px;
@@ -599,27 +477,10 @@ aside.banner{
 .section.trainers-list{
   .trainers-item{
     padding: 70px 0 0;
-    background-color: #fff;
-    &:nth-child(2n+2){
-      background-color: #f1f2f4;
-    }
-    img{}
     .trainers-name{
-      font-family: 'Lato-BlackItalic';
-      font-size: 35px;
-      color:#0b3a9f;
       span{
         display: block;
-        color:#000;
       }
-    }
-    .trainers-motto{
-      font-family: 'Lato-Regular';
-      font-size: 20px;
-    }
-    .description{
-      font-family: 'Lato-Light';
-      font-size: 16px;
     }
     .trainers-stats{
       display: block;
@@ -631,8 +492,6 @@ aside.banner{
         justify-content: flex-start;
         margin-bottom: 1rem;
         .stat-label{
-          font-family: 'Lato-Bold';
-          font-size:16px;
           width:100px;
           display: block;
         }
@@ -648,7 +507,6 @@ aside.banner{
             height:12px;
             width:100px;
             border-radius: 6px;
-            background-color: #0b3a9f;
           }
         }
       }
@@ -659,7 +517,7 @@ aside.banner{
   padding: 3rem 0;
 }
 .post.news-item{
-  padding:30px auto;
+  padding:30px 0;
 }
 // sidebar-right
 #secondary{
@@ -675,7 +533,6 @@ aside.banner{
         bottom:0;
         display: block;
         width:30%;
-        border-bottom: 2px solid #0b3a9f;
         z-index: 2;
       }
       &:after{
@@ -684,7 +541,6 @@ aside.banner{
         content: '';
         display: block;
         width:100%;
-        border-bottom: 2px solid #bababa;
       }
     }
     ul{
@@ -695,8 +551,6 @@ aside.banner{
         margin-bottom: 1rem;
         a{
           display: block;
-          color:#000;
-          text-decoration: none;
           img.post-thumbnail{
             max-width:115px;
             float: left;
@@ -708,9 +562,6 @@ aside.banner{
           .meta{
             .posted-on{
               .screen-reader-text{display: none}
-              .entry-date{
-                color: #bababa;
-              }
             }
           }
         }
@@ -729,7 +580,6 @@ aside.banner{
         bottom:0;
         display: block;
         width:30%;
-        border-bottom: 2px solid #0b3a9f;
         z-index: 2;
       }
       &:after{
@@ -738,7 +588,6 @@ aside.banner{
         content: '';
         display: block;
         width:100%;
-        border-bottom: 2px solid #bababa;
       }
     }
     ul{
@@ -763,30 +612,13 @@ aside.banner{
   .widget_mc_mm_widget{
     .mailchimb-widget{
       padding:60px 15px;
-      background: url(../images/subscribe-form-bg.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      color:#fff;
-      text-align: center;
-      .widget-title{}
       .mailchimb-form{
         .text{
           padding:32px;
-          p{
-
-          }
         }
         input[type="email"]{
           width:100%;
-          border:1px solid #0b3a9f;
-          border-radius: 0;
-          background: transparent;
           margin-bottom: 1rem;
-          text-align: center;
-          &::placeholder{
-            color:#fff;
-          }
         }
       }
     }
@@ -794,37 +626,20 @@ aside.banner{
 }
 .entry-meta{
   margin-bottom: 23px;
-  line-height: 33px;
   .byline{
-    color:#bababa;
     padding-right: 2rem;
     &:before{
-      content:'\f040';
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1rem;
       padding-left: 5px;
     }
     a{
-      color:#bababa;
-      text-decoration: none;
       cursor:pointer;
     }
   }
   .posted-on{
-    color:#bababa;
     &:before{
-      content:'\f073';
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1rem;
       padding-left: 5px;
     }
     a{
-      color:#bababa;
-      text-decoration: none;
       cursor:pointer;
     }
     .screen-reader-text{display: none;}
@@ -832,83 +647,44 @@ aside.banner{
 }
 .entry-content{
   p{
-    font-family: 'Lato-Light';
-    font-size: 16px;
     margin:1rem 0;
   }
   blockquote{
     position: relative;
     padding-left:100px;
-    border-left:5px solid #0b3a9f;
-    background-color: #fff;
-    font-family: 'Lato-LightItalic';
-    // font-style: italic;
     span.quote.left{
-      font-size: 92px;
       position: absolute;
       left:35px;
       top:0;
-      color:#e5e5e5;
     }
   }
 }
 aside.sidebar-footer{
   .widget_tags_text{
     margin-top: 50px;
-    font-family: 'Lato-Bold';
     .widget-title{
       display: inline;
-      font-size: 20px;
-    }
-    .tag-item{
-      font-size: 18px;
-      text-decoration: none;
-      color:#000;
     }
   }
   .widget_repost_news{
     padding:40px 0;
     .widget-title{
       display: inline;
-      font-family: 'Lato-Bold';
-      font-size: 16px;
     }
     .social-icon{
       display: inline-block;
       width:1.5rem;
       height:1.5rem;
       box-sizing: border-box;
-      background-color: #bababa;
-      color:#fff;
-      border-radius:50%;
       padding-top: 2px;
       margin:0 .2rem;
-      &:hover{
-        color: #fff;
-        background-color: #0b3a9f;
-      }
       &.insta-icon:before {
-        content: '\f16d';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
         padding-left: 5px;
       }
       &.tw-icon:before {
-        content: '\f099';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
         padding-left: 5px;
       }
       &.fb-icon:before {
-        content: '\f09a';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
         padding-left: 7px;
       }
     }
@@ -916,18 +692,8 @@ aside.sidebar-footer{
   .widget_older_post{
     display: block;
     padding:15px;
-    border-top: 1px solid #bababa;
-    border-bottom: 1px solid #bababa;
     a{
-      font-family: 'Lato-Bold';
-      font-size: 16px;
-      color:#000;
       &:before{
-        content:'\f104';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
         padding-right: 1rem;
       }
     }
@@ -935,8 +701,6 @@ aside.sidebar-footer{
 }
 #comments{
   .comments-title{
-    font-family: 'Lato-Bold';
-    font-size: 25px;
     margin: 45px 0;
   }
   .comment-list{
@@ -944,7 +708,6 @@ aside.sidebar-footer{
     padding:0;
     .comment{
       padding:32px 26px;
-      border:1px solid #bababa;
       margin: 1.5rem 0;
       .reply{
         display: none;
@@ -956,8 +719,6 @@ aside.sidebar-footer{
   }
   .comment-respond{
     .comment-reply-title{
-      font-family: 'Lato-Bold';
-      font-size: 25px;
       margin: 45px 0;
     }
     .comment-form{
@@ -969,7 +730,6 @@ aside.sidebar-footer{
         input{
           width:100%;
           border:0;
-          background-color: #fff;
           height: 3rem;
         }
       }
@@ -987,12 +747,10 @@ aside.sidebar-footer{
         textarea{
           width:100%;
           border:0;
-          background-color: #fff;
         }
       }
       .form-submit{
         .submit{
-          background-color: #0b3a9f;
           width:10rem;
         }
       }
@@ -1009,23 +767,10 @@ aside.sidebar-footer{
     }
     .trainer-bio{
       padding-top: 50px;
-      .trainers-name{
-        font-family: 'Lato-BlackItalic';
-        font-size: 35px;
-        color:#0b3a9f;
-        span{
-          // display: block;
-          color:#000;
-        }
-      }
       .trainers-motto{
-        font-family: 'Lato-Regular';
-        font-size: 20px;
         margin-bottom: 25px;
       }
       .description{
-        font-family: 'Lato-Light';
-        font-size: 16px;
         margin-bottom: 25px;
       }
       .trainers-features{
@@ -1048,15 +793,6 @@ aside.sidebar-footer{
           .feature-value{
             float: right;
           }
-          &:first-child:before{
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474.199 474.199" fill="#0b3a9f"><path d="M471.952 187.434c-5.925-14.918-22.822-22.208-37.74-16.283-.767.305-1.522.642-2.26 1.011L410.4 182.954l-44-58.656c-.544-.725-1.206-1.353-1.96-1.856l-48-32c-.964-.643-2.056-1.069-3.2-1.248l-104-16c-2.514-.387-5.062.445-6.864 2.24l-59.64 59.416c-10.016 9.979-10.047 26.188-.068 36.204.023.023.045.046.068.068 9.553 9.489 24.811 9.992 34.968 1.152l48.328-42.288 42.88 12.256-35.888 78.856-55.056 78.648-65.44 58.888c-11.918 10.237-13.281 28.198-3.044 40.116s28.198 13.281 40.116 3.044l72.096-59.04 43.096-43.096 54.656 41-12.16 84.864c-1.139 7.936 1.226 15.976 6.48 22.032 5.397 6.173 13.233 9.663 21.432 9.544 13.583.019 25.257-9.632 27.792-22.976l20.912-111.552c.52-2.779-.466-5.625-2.592-7.488l-59.92-52.384 25.504-70.128 47.088 53.816c2.304 2.63 6.049 3.46 9.248 2.048l54.016-23.888c14.201-6.291 20.743-22.801 14.704-37.112zm-21.176 22.464l-48.632 21.504-52.128-59.576c-2.911-3.324-7.965-3.658-11.289-.747-1.014.888-1.786 2.017-2.247 3.283l-32 88c-1.128 3.102-.235 6.578 2.248 8.752l60.568 53L347.2 431.178c-1.199 5.922-6.497 10.114-12.536 9.92-6.442-.002-11.663-5.225-11.661-11.667 0-.55.039-1.1.117-1.645l12.8-89.552c.415-2.893-.781-5.783-3.12-7.536l-64-48c-3.185-2.388-7.641-2.071-10.456.744l-47.408 47.464-71.504 58.504c-5.287 4.381-13.124 3.646-17.505-1.641-4.273-5.157-3.693-12.773 1.313-17.223l66.112-59.504c.452-.405.854-.861 1.2-1.36l56-80c.283-.4.526-.826.728-1.272l40-88c1.828-4.023.049-8.765-3.974-10.593-.358-.163-.728-.299-1.106-.407l-56-16c-2.613-.757-5.431-.127-7.472 1.672l-51.6 45.152c-3.879 3.625-9.963 3.419-13.588-.46s-3.419-9.963.46-13.588l56.8-56.568 98.248 15.12 45.352 30.256 47.2 62.904c2.318 3.094 6.517 4.087 9.976 2.36l27.528-13.8c3.238-1.63 7.012-1.824 10.4-.536 3.626 1.416 6.459 4.334 7.768 8 2.49 6.206-.382 13.269-6.496 15.976zM48 65.098h104v16H48zM16 65.098h16v16H16zM80 129.098h16v16H80zM0 129.098h64v16H0zM40 193.098h80v16H40z"/><path d="M16 257.098h136v16H16zM32 321.098h64v16H32zM0 321.098h16v16H0zM16 385.098h56v16H16zM400 17.098h-36c-24.301 0-44 19.699-44 44s19.699 44 44 44 44-19.699 44-44v-36c0-4.418-3.582-8-8-8zm-8 44c.06 15.402-12.376 27.937-27.778 27.997-8.637.034-16.802-3.936-22.11-10.749C355.429 65.182 373.279 57.613 392 57.194v3.904zm0-19.904c-20.491.373-40.228 7.795-55.888 21.016 0-.376-.112-.728-.112-1.112 0-15.464 12.536-28 28-28h28v8.096z"/></svg>');
-          }
-          &:nth-child(2):before{
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#0b3a9f"><path d="M246.607 161.407c-4.147 0-7.51 3.362-7.51 7.51v28.729c0 4.147 3.362 7.51 7.51 7.51s7.51-3.362 7.51-7.51v-28.729c0-4.147-3.362-7.51-7.51-7.51zM246.607 404.846c-4.147 0-7.51 3.362-7.51 7.51v28.729c0 4.147 3.362 7.51 7.51 7.51s7.51-3.362 7.51-7.51v-28.729c0-4.148-3.362-7.51-7.51-7.51zM199.433 208.274l-14.364-24.879c-2.074-3.593-6.666-4.824-10.259-2.749-3.592 2.073-4.823 6.667-2.749 10.259l14.365 24.88c1.391 2.409 3.915 3.756 6.51 3.756 1.274 0 2.565-.325 3.748-1.008 3.592-2.073 4.824-6.667 2.749-10.259zM321.154 419.097l-14.365-24.88c-2.074-3.593-6.666-4.823-10.259-2.749-3.591 2.075-4.822 6.668-2.748 10.26l14.365 24.88c1.391 2.409 3.915 3.756 6.51 3.756 1.274 0 2.565-.325 3.748-1.008 3.592-2.073 4.822-6.667 2.749-10.259zM157.391 244.82l-24.88-14.364c-3.593-2.074-8.185-.843-10.259 2.749s-.843 8.185 2.749 10.259l24.88 14.364c1.183.683 2.474 1.008 3.748 1.008 2.595 0 5.12-1.347 6.51-3.756 2.075-3.593.843-8.186-2.748-10.26zM368.214 366.54l-24.88-14.365c-3.592-2.075-8.185-.844-10.259 2.749-2.072 3.591-.842 8.184 2.75 10.258l24.88 14.365c1.183.683 2.474 1.008 3.748 1.008 2.595 0 5.119-1.347 6.51-3.756 2.073-3.592.842-8.185-2.749-10.259zM139.253 297.491h-28.729c-4.148 0-7.51 3.362-7.51 7.51 0 4.147 3.362 7.51 7.51 7.51h28.729c4.147 0 7.51-3.363 7.51-7.51 0-4.148-3.362-7.51-7.51-7.51zM382.692 297.491h-28.729c-4.148 0-7.51 3.362-7.51 7.51 0 4.147 3.362 7.51 7.51 7.51h28.729c4.148 0 7.51-3.362 7.51-7.51s-3.362-7.51-7.51-7.51zM160.141 354.922c-2.074-3.592-6.667-4.823-10.259-2.749l-24.88 14.365c-3.592 2.073-4.823 6.667-2.749 10.259 1.391 2.41 3.915 3.757 6.511 3.757 1.274 0 2.565-.325 3.748-1.008l24.88-14.365c3.592-2.073 4.822-6.667 2.749-10.259zM370.963 233.204c-2.073-3.592-6.667-4.821-10.258-2.748l-24.88 14.364c-3.592 2.073-4.823 6.667-2.749 10.259 1.391 2.409 3.915 3.756 6.51 3.756 1.274 0 2.565-.325 3.748-1.008l24.88-14.364c3.592-2.073 4.822-6.667 2.749-10.259zM196.685 391.469c-3.593-2.075-8.185-.844-10.259 2.749l-14.365 24.88c-2.073 3.591-.842 8.185 2.75 10.258 1.183.683 2.474 1.008 3.748 1.008 2.595 0 5.119-1.347 6.51-3.756l14.365-24.88c2.074-3.592.844-8.185-2.749-10.259zM318.404 180.646c-3.593-2.075-8.185-.844-10.259 2.749l-14.365 24.88c-2.073 3.591-.842 8.185 2.75 10.258 1.183.683 2.474 1.008 3.748 1.008 2.595 0 5.12-1.347 6.51-3.756l14.365-24.88c2.074-3.592.843-8.185-2.749-10.259z"/><path d="M433.304 145.343c2.447 2.447 5.66 3.67 8.874 3.67 3.213 0 6.428-1.223 8.874-3.67l17.663-17.663c2.37-2.37 3.676-5.522 3.676-8.875 0-3.353-1.306-6.505-3.676-8.874l-50.198-50.198c-4.894-4.893-12.856-4.893-17.748 0l-17.663 17.663c-4.894 4.893-4.894 12.856 0 17.749l1.938 1.938-31.026 31.026c-20.159-12.286-42.574-21.22-66.463-26.032V63.105h9.607c6.92 0 12.55-5.63 12.55-12.55V12.55c0-6.92-5.63-12.55-12.55-12.55H196.053c-6.92 0-12.55 5.63-12.55 12.55v38.004c0 6.92 5.63 12.55 12.55 12.55h9.607v38.973c-94.592 19.058-166.05 102.8-166.05 202.924 0 36.856 9.81 73.047 28.369 104.658 18.01 30.676 43.772 56.362 74.499 74.281 3.583 2.089 8.182.879 10.271-2.704s.879-8.181-2.704-10.271c-28.507-16.623-52.406-40.452-69.113-68.911-17.207-29.307-26.302-62.868-26.302-97.053 0-105.857 86.122-191.979 191.979-191.979 105.858 0 191.979 86.122 191.979 191.979 0 105.858-86.122 191.979-191.979 191.979-17.992 0-35.798-2.485-52.924-7.386-3.984-1.141-8.144 1.166-9.286 5.154-1.141 3.988 1.166 8.145 5.154 9.286 18.47 5.286 37.666 7.966 57.056 7.966 114.14 0 206.999-92.859 206.999-206.999 0-51.187-18.685-98.085-49.579-134.257l27.339-27.339 1.936 1.938zm-160.768-45.72c-8.495-1.066-17.148-1.62-25.928-1.62-8.78 0-17.432.554-25.927 1.62V63.105h51.855v36.518zM213.17 48.085h-14.648V15.02h96.17v33.065H213.17zm196.475 24.016l46.705 46.705-14.17 14.17-46.705-46.705 14.17-14.17zm-15.786 87.571c-8.336-8.445-17.385-16.182-27.058-23.104l28.466-28.466 25.081 25.081-26.489 26.489z"/><path d="M246.607 135.56c-36.083 0-70.529 11.19-99.615 32.361-3.353 2.441-4.093 7.138-1.653 10.491 2.441 3.354 7.137 4.093 10.491 1.653 26.501-19.29 57.89-29.485 90.776-29.485 85.148 0 154.421 69.273 154.421 154.421s-69.273 154.421-154.421 154.421-154.42-69.273-154.42-154.421c0-33.83 10.734-65.946 31.042-92.878 2.498-3.312 1.837-8.021-1.474-10.518-3.314-2.497-8.021-1.837-10.518 1.475-22.288 29.558-34.07 64.802-34.07 101.921 0 93.43 76.011 169.441 169.441 169.441s169.441-76.011 169.441-169.441S340.037 135.56 246.607 135.56z"/><path d="M246.608 277.079c-8.017 0-15.251 3.401-20.348 8.831l-36.508-22.998c-3.51-2.211-8.147-1.157-10.357 2.351-2.211 3.509-1.158 8.146 2.351 10.357l37.535 23.645c-.388 1.852-.595 3.77-.595 5.736 0 15.397 12.526 27.922 27.922 27.922 15.397 0 27.922-12.526 27.922-27.922 0-15.397-12.526-27.922-27.922-27.922zm-.001 40.825c-7.114 0-12.903-5.788-12.903-12.903s5.789-12.903 12.903-12.903 12.903 5.788 12.903 12.903-5.787 12.903-12.903 12.903z"/></svg>');
-          }
-          &:last-child:before{
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.002 512.002" fill="#0b3a9f"><path d="M488.906 206.907c-3.934-1.541-8.383-.834-11.881 1.535-9.889 6.697-26.63 10.891-28.205 11.276-2.089.414-18.985 3.929-38.316 12.931-26.123 12.165-44.722 28.924-53.997 48.603-14.042-9.677-44.221-23.703-101.153-23.703-1.143 0-2.307.006-3.471.017-.058.001-.116.002-.174.004-25.109.832-49.048 7.402-73.836 20.408 1.766-5.54 3.247-12.014 4.072-19.459 2.519-22.715-2.167-46.192-13.553-67.894-5.287-10.079-11.506-19.693-18.483-28.578-2.716-3.457-2.868-7.737-.399-11.166 1.559-2.163 3.736-4.385 6.477-6.636 15.78 17.312 38.5 28.194 63.715 28.194 15.068 0 29.901-3.947 42.896-11.414 3.587-2.061 4.824-6.64 2.763-10.226-2.061-3.588-6.643-4.825-10.226-2.763-10.727 6.164-22.98 9.422-35.433 9.422-39.281 0-71.238-31.957-71.238-71.239 0-39.281 31.957-71.238 71.238-71.238 39.282 0 71.239 31.957 71.239 71.238 0 10.543-2.247 20.691-6.68 30.162-1.754 3.746-.138 8.205 3.61 9.959 3.745 1.757 8.206.138 9.959-3.61 5.369-11.472 8.092-23.757 8.092-36.511C305.922 38.677 267.244 0 219.703 0s-86.219 38.677-86.219 86.219c0 4.697.392 9.302 1.118 13.797-3.85 1.984-6.888 3.621-7.501 3.972-22.029 12.609-41.529 29.623-57.961 50.571-2.588 3.3-5.118 6.73-7.52 10.194-2.356 3.4-1.511 8.067 1.888 10.424 3.401 2.355 8.066 1.51 10.424-1.888 2.234-3.224 4.589-6.415 6.996-9.485 15.232-19.419 33.271-35.17 53.612-46.813.788-.447 2.165-1.19 3.87-2.085 2.182 6.165 5.049 12.004 8.505 17.438-3.963 3.208-7.178 6.48-9.557 9.78-6.435 8.934-6.133 20.387.771 29.176 6.414 8.169 12.134 17.012 16.998 26.285 9.993 19.047 14.118 39.547 11.93 59.282-2.416 21.774-11.268 33.246-13.191 35.511-1.86 1.243-6.752 4.513-10.829 7.238-3.439 2.299-4.362 6.949-2.063 10.389 2.299 3.439 6.95 4.363 10.39 2.065l11.547-7.718c.012-.008.025-.017.037-.025l.012-.008c31.344-20.949 58.846-30.751 89.157-31.772 60.634-.577 88.692 15.546 97.926 22.51 3.084 2.324 6.995 3.08 10.727 2.072 3.758-1.013 6.778-3.653 8.287-7.242 17.871-42.54 82.122-55.367 82.763-55.49.104-.02.208-.042.311-.066.769-.181 17.247-4.112 29.743-11.277V497.02l-37.201-.007c-49.81.615-69.968-29.883-76.338-43.021-2.82-5.817-9.736-8.522-15.747-6.168-110.271 43.251-225.031 12.438-269.25-2.818-12.805-4.418-23.744-12.254-30.804-22.064-25.741-35.777-23.945-89.435-20.355-126.684 1.884-19.558 5.338-38.16 10.264-55.293 2.736-9.515 5.983-18.787 9.653-27.559 1.717-4.105-.495-8.872-4.921-10.114-3.697-1.037-7.541 1.076-9.019 4.619-3.844 9.22-7.245 18.946-10.111 28.914-5.18 18.014-8.806 37.525-10.779 57.995-3.822 39.657-5.585 96.992 23.108 136.871 8.979 12.478 22.146 21.979 38.077 27.476 28.378 9.79 84.827 25.756 151.016 25.754 39.946-.001 83.441-5.816 126.438-22.316 7.363 14.006 31.521 49.4 87.233 49.397.535 0 1.084-.003 1.625-.01l39.603.008h.005c3.743 0 7.236-1.637 9.659-4.573 1.895-2.297 2.824-5.242 2.824-8.22v-280.67c.002-5.118-3.091-9.727-7.948-11.63z"/><path d="M219.703 39.364c-25.836 0-46.854 21.019-46.854 46.855 0 25.835 21.019 46.855 46.854 46.855s46.855-21.019 46.855-46.855-21.019-46.855-46.855-46.855zm0 78.729c-17.575 0-31.874-14.299-31.874-31.874s14.299-31.874 31.874-31.874c17.575-.001 31.874 14.298 31.874 31.874s-14.299 31.874-31.874 31.874z"/></svg>');
-          }
         }
       }
       .trainers-stats{
@@ -1070,8 +806,6 @@ aside.sidebar-footer{
           justify-content: flex-start;
           margin-bottom: 1rem;
           .stat-label{
-            font-family: 'Lato-Bold';
-            font-size:16px;
             width:100px;
             display: block;
           }
@@ -1087,7 +821,6 @@ aside.sidebar-footer{
               height:12px;
               width:100px;
               border-radius: 6px;
-              background-color: #0b3a9f;
             }
           }
         }
@@ -1096,54 +829,19 @@ aside.sidebar-footer{
     .trainers-career{
       padding-top: 25px;
       .title{
-        font-family: 'Lato-Bold';
-        font-size: 25px;
         margin-bottom: 25px;
       }
-      .career-description{
-        font-family: 'Lato-Light';
-        font-size: 16px;}
       .career-stages{
         padding-left: 17px;
-        .career-stage{
-          .stage-title{
-              font-family: 'Lato-Bold';
-              font-size: 16px;
-          }
-          .stage-description{
-              font-family: 'Lato-Light';
-              font-size: 16px;
-          }
-        }
       }
     }
     .trainer-classes{
       padding-top: 28px;
       .title{
-        font-family: 'Lato-Bold';
-        font-size: 25px;
         margin-bottom: 25px;
       }
-      .table{
-        thead{
-          font-family: 'Lato-Bold';
-          font-size: 20px;
-          color: #fff;
-          background-color: #0b3a9f;
-          tr{
-            td{}
-          }
-        }
-        tbody{
-          tr{
-            td{
+      .table tbody tr td{
               border:0;
-            }
-            &:hover{
-              background-color: #dfdfdf;
-            }
-          }
-        }
       }
     }
   }
@@ -1151,25 +849,18 @@ aside.sidebar-footer{
 .template-classes{
   .section.gender-filter{
     padding-top: 200px;
-    color:#fff;
     .filter-male{
       position: relative;
       padding: 46px 120px  46px 46px;
-      border:2px solid #fff;
-      outline:15px solid #0b3a9f;
-      background-color: #0b3a9f;
       .filter-title{
-        text-align: right;
         margin-bottom: 25px;
       }
       .filter-thumbnail{
         position: absolute;
         bottom:-17px;
         right:-58%;
-        // transform: scale(1.2);
       }
       .description{
-        text-align: right;
         margin-bottom: 25px;
       }
       .btn-border{
@@ -1180,9 +871,6 @@ aside.sidebar-footer{
     .filter-female{
       position: relative;
       padding: 46px 46px 46px 120px;
-      border:2px solid #fff;
-      outline:15px solid #0b3a9f;
-      background-color: #0b3a9f;
       .filter-title{
         margin-bottom: 25px;
       }
@@ -1230,9 +918,6 @@ aside.sidebar-footer{
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            background-color: #0b3a9f;
-            border:1px solid #fff;
-            outline:3px solid #0b3a9f;
           }
         }
       }
@@ -1298,25 +983,7 @@ aside.sidebar-footer{
   }
 }
 .training-info{
-  .coach-bio{
-    .coach-name{
-      font-family: 'Lato-Bold';
-      font-size: 25px;
-    }
-    .coach-motto{
-      font-family: 'Lato-Regular';
-      font-size: 20px;
-    }
-    .description{
-      font-family: 'Lato-Light';
-      font-size: 16px;
-    }
-  }
   .schedule{
-    .title{
-      font-family: 'Lato-Bold';
-      font-size: 25px;
-    }
     .tabs-wrapper{
       position: relative;
       padding-bottom: 8rem;
@@ -1328,12 +995,6 @@ aside.sidebar-footer{
       input[name='tab'] ~ label{
         display: block;
         padding:.5rem;
-      }
-      input[name='tab']:checked+label{
-        color:#fff;
-        background-color: #0b3a9f;
-        border:1px solid #fff;
-        outline:3px solid #0b3a9f;
       }
       input[name='tab']+label+.tab-content{
         display: none;
@@ -1350,27 +1011,10 @@ aside.sidebar-footer{
         flex-wrap: wrap;
         justify-content: space-between;
         input[name='time']+label{
-          font-family: 'Lato-Light';
-          font-size: 16px;
           padding: 1rem;
-        }
-        input[name='time']:disabled+label{
-          color:#dfdfdf;
-        }
-        input[name='time']:checked+label{
-          text-decoration: underline;
-          font-family: 'Lato-Black';
         }
       }
     }
-    #scheduleSubmit{
-      font-family: 'Lato-Regular';
-      font-size: 15px;
-    }
-  }
-  .title{
-    font-family: 'Lato-Bold';
-    font-size: 25px;
   }
   .gallery-wrapper{
     display: flex;
@@ -1391,8 +1035,6 @@ aside.sidebar-footer{
         z-index: 2;
         height: 0;
         opacity:0;
-        background: linear-gradient(to top, rgba(11, 58, 159, .5) 0, rgba(11, 58, 159, .5) 100%);
-        filter:saturate(2.5);
         transition: all .3s ease-in-out;
       }
       &:hover .gallery-item-overlay{
@@ -1443,6 +1085,15 @@ aside.sidebar-footer{
     }
   }
 }
+.training .stats-row:before{
+  content:'';
+  display: block;
+  position: absolute;
+  width:2rem;
+  height:2rem;
+  left:0;
+  top:1rem;
+}
 .template-reviews{
   .reviews{
     padding:30px 0;
@@ -1462,56 +1113,37 @@ aside.sidebar-footer{
         img{
           width:133px;
           height:133px;
-          border-radius: 50%;
           position: absolute;
           top:0;
           left:15px;
-          border:10px solid #f1f2f4;
           z-index: 2;
         }
         .well{
           position: relative;
-          margin-left: 75px;
-          margin-top: 75px;
-          margin-right: 15px;
-          // height:375px;
+          margin: 75px 15px 0 75px;
           .carousel-caption{
             position: relative;
             right:0;
             left:0;
             padding-bottom: 0;
-            text-shadow: none;
-            color:#000;
             text-align: left;
             .reviewer{
               margin-left: 50px;
               margin-top: 0;
-              font-family: 'Lato-BoldItalic';
-              text-transform: uppercase;
             }
             .reviewer-occupation{
               display: block;
               margin: 0 0 30px 50px;
-              font-family: 'Lato-Regular';
-              color: #bababa;
             }
             blockquote{
-              font-family: 'Lato-Light';
-              font-size: 18px;
-              line-height: 24px;
               border:0;
               .quote{
                 display: inline-block;
-                font-size: 60px;
-                line-height: 0px;
                 &.left{
-                  text-indent: -20px;
                   transform: translateY(23px);
-                  color: #bababa;
                 }
                 &.right{
                   transform: translateY(40px);
-                  color: #bababa;
                 }
               }
             }
@@ -1519,45 +1151,42 @@ aside.sidebar-footer{
         }
       }
     }
-    .pagination{
+  }
+  .pagination{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    div{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      div{
+      ul{
+        list-style-type: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        ul{
-          list-style-type: none;
+        margin:0;
+        li{
+          margin:0.5rem;
+          width:2rem;
+          height:2rem;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
           align-items: center;
           justify-content: center;
-          margin:0;
-          li{
-            margin:0.5rem;
-            width:2rem;
-            height:2rem;
+          &.active{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            &.active{
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              align-items: center;
-              justify-content: center;
-              background-color: #0b3a9f;
-              border:1px solid #fff;
-              outline:3px solid #0b3a9f;
-            }
           }
         }
       }
@@ -1578,8 +1207,7 @@ aside.sidebar-footer{
     justify-content: center;
     align-items: center;
     .registration-thumbnail{
-        // max-width: 50%;
-        height:100%;
+      height:100%;
     }
     #registration{
       position: relative;
@@ -1589,14 +1217,6 @@ aside.sidebar-footer{
       justify-content: flex-start;
       align-items: flex-start;
       padding-left:30px;
-      .registration-title{
-        font-family: 'Lato-BlackItalic';
-        font-size: 35px;
-      }
-      .description{
-        font-family: 'Lato-Light';
-        font-size: 16px;
-      }
       .input-group{
         display: flex;
         flex-direction: column;
@@ -1605,14 +1225,10 @@ aside.sidebar-footer{
         align-items: flex-start;
         width:100%;
         max-width:400px;
-        font-family: 'Lato-Light';
-        font-size: 16px;
         label{
           width:100%;
-          max-width:400px;margin:15px 0 10px;
-          span{
-            color:#f00;
-          }
+          max-width:400px;
+          margin:15px 0 10px;
         }
         input[type="text"]{
           width:100%;
@@ -1627,7 +1243,6 @@ aside.sidebar-footer{
           border:0;
           height:2rem;
           padding-left: 1rem;
-          option{}
         }
         textarea{
           border:0;
@@ -1649,21 +1264,12 @@ aside.sidebar-footer{
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  .title{
-    font-family: 'Lato-Black';
-    font-size: 114px;
-    color:#0b3a9f;
-  }
-  .title-sub{
-    font-family: 'Lato-BlackItalic';
-    font-size: 35px;
-    span{
-      color:#0b3a9f;
-    }
-  }
   .btn-filled{
     margin-top: 50px;
   }
+}
+.classes-thumbnail img{
+  max-width:340px;
 }
 @import "site-header";
 @import "carousel.vertical";

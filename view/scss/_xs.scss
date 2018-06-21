@@ -114,6 +114,9 @@
       }
     }
   }
+  .site-header .navbar-transparent .container .navbar-collapse.collapsing{
+    display: none;
+  }
   .site-header .navbar-transparent .container .navbar-collapse.collapse{
     position: absolute;
     top:0;
@@ -217,5 +220,80 @@
         }
       }
     }
+  }
+  .section.trainers-list .trainers-item .trainers-stats .stats-row {
+    display: block;
+    width:inherit;
+  }
+  .section.trainers-list .trainers-item .btn-filled{
+    margin: 2rem 0;
+  }
+  .training-info .schedule .tabs-wrapper input[name='tab'] + label{
+    font-size: 12px;
+    margin-left:-10px;
+  }
+  .training-info .schedule .tabs-wrapper .tab-content input[name='time'] + label{
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+  .template-reviews .reviews .review-item .item-inner {
+    img{
+      left:-18px;
+    }
+    .well{
+      margin:10px;
+      .reviewer{
+        text-align: right;
+      }
+      .reviewer-occupation{
+        text-align: right;
+      }
+    }
+  }
+  .pagination ul{
+    padding:0;
+  }
+  .template-classes .section.gender-filter{
+    padding-top:95px;
+  }
+  .template-classes .section.gender-filter .filter-male{
+    margin:30px 0;
+    padding: 30px 120px 30px 30px;
+    .filter-thumbnail{
+      max-width:85%;
+      right:-47%;
+    }
+    .filter-title{
+      text-align: left;
+    }
+    .description{
+      text-align: left;
+    }
+  }
+  .template-classes .section.gender-filter .filter-female{
+    margin:30px 0;
+    padding: 30px 30px 30px 120px;
+    text-align: right;
+    .filter-thumbnail{
+      max-width:95%;
+      left:-47%;
+    }
+  }
+  .site-footer{
+    .navbar-left{
+      display: none;
+    }
+    .social-navbar{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  #reviewslider .carousel-control.right span{
+    right:16px;
+  }
+  #reviewslider .carousel-control.left span{
+    left:16px;    
   }
 }
