@@ -23,9 +23,14 @@ html, body{
   font-size: 25px;
   text-align: right;
 }
-.trainers-carousel-header h2{
-  font-family: 'Lato-BlackItalic';
-  font-size: 35px;
+.trainers-carousel-header {
+  h2{
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px;
+  }
+  .btn-filled{
+    font-size: 15px;
+  }
 }
 .news-feed .news-feed-header .section-title{
   font-family: 'Lato-BlackItalic';
@@ -266,6 +271,14 @@ aside.sidebar-footer{
       font-size: 25px;
     }
   }
+}
+.classes-man .classes-header .btn-transparent,
+.classes-woman .classes-header .btn-transparent{
+  font-size: 18px;
+}
+.classes-man .classes-thumbnail .classes-title{
+  font-family: 'Lato-Bold';
+  font-size: 16px;
 }
 .template-coach{
   .section.row.coach-bio{

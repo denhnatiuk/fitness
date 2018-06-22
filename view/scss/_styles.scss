@@ -25,7 +25,14 @@
         padding:1rem 2.25rem;
       }
 }
-
+.v-slide{
+  width:100%;
+  filter:blur(115px);
+}
+.v-slide.is-loaded{
+  filter:none;
+  transition: filter 0.3s ease-in-out;
+}
 .classes-man, .classes-woman{
   display: flex;
   flex-direction: row;
@@ -46,12 +53,23 @@
 .well.classes-thumbnail.classes-header .btn-transparent:after{
   content:'';
   position: absolute;
-  left: 5rem;
-  top:0.75rem;
+  left: 5.5rem;
+  top:0.899rem;
   display: block;
   width:0.5rem;
   height:0.5rem;
   transform: rotate(-45deg);
+}
+.well.classes-thumbnail.classes-header .btn-transparent:hover:after{
+  content:'';
+  position: absolute;
+  left: 6.5rem;
+  top:0.899rem;
+  display: block;
+  width:0.5rem;
+  height:0.5rem;
+  transform: rotate(-45deg);
+  transition: all 0.2s ease-in-out;
 }
 .section-icon{
   display: block;
@@ -97,7 +115,7 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
   float: left;
   margin-right: 5%;
   & .btn-filled{
-    padding:0.5rem 1.5rem;
+    padding:1rem 2.5rem;
   }
   & h2{
     margin:3rem 0;
@@ -184,7 +202,8 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
   & .btn-filled{
     position: relative;
     float: right;
-    margin: 45px 0 35px 0;
+    margin: 75px 0 35px 0;
+    padding:.5rem 2.5rem;
   }
   &:after{
     content:'';
@@ -236,8 +255,9 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay{
     }
   }
 }
-aside.banner{
-  .container{
+aside.row{
+  .container.banner{
+    // padding:50px 0;
     .yoga-banner-header{
       height: 395px;
       padding: 45px;
@@ -1224,6 +1244,9 @@ aside.sidebar-footer{
 }
 .classes-thumbnail img{
   max-width:340px;
+}
+.xs-index-hero .btn-filled{
+  margin-left: -15px;
 }
 @import "site-header";
 @import "carousel.vertical";

@@ -84,11 +84,21 @@ body {
     color: #fff; }
 
 .well.classes-thumbnail.classes-header .btn-transparent {
-  border-top: 1px solid #f1f2f4; }
+  border-top: 1px solid rgba(186, 186, 186, 0.5); }
 
 .well.classes-thumbnail.classes-header .btn-transparent:after {
   border-right: 2px solid #0b3a9f;
   border-bottom: 2px solid #0b3a9f; }
+
+.well.classes-thumbnail.classes-header .btn-transparent:hover:after {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000; }
+
+.classes-man .classes-thumbnail .classes-title {
+  color: #000; }
+
+.classes-man .classes-thumbnail:hover .classes-title {
+  color: #0b3a9f; }
 
 #trainersCarousel .carousel-control.left,
 #trainersCarousel .carousel-control.right {
@@ -541,6 +551,9 @@ html, body {
   font-family: 'Lato-BlackItalic';
   font-size: 35px; }
 
+.trainers-carousel-header .btn-filled {
+  font-size: 15px; }
+
 .news-feed .news-feed-header .section-title {
   font-family: 'Lato-BlackItalic';
   font-size: 35px; }
@@ -718,6 +731,14 @@ aside.sidebar-footer .widget_older_post a {
   font-family: 'Lato-Bold';
   font-size: 25px; }
 
+.classes-man .classes-header .btn-transparent,
+.classes-woman .classes-header .btn-transparent {
+  font-size: 18px; }
+
+.classes-man .classes-thumbnail .classes-title {
+  font-family: 'Lato-Bold';
+  font-size: 16px; }
+
 .template-coach .section.row.coach-bio .trainer-bio .trainers-name {
   font-family: 'Lato-BlackItalic';
   font-size: 35px; }
@@ -871,6 +892,14 @@ aside.sidebar-footer .widget_older_post a {
   margin-top: 3rem;
   padding: 1rem 2.25rem; }
 
+.v-slide {
+  width: 100%;
+  filter: blur(115px); }
+
+.v-slide.is-loaded {
+  filter: none;
+  transition: filter 0.3s ease-in-out; }
+
 .classes-man, .classes-woman {
   display: flex;
   flex-direction: row;
@@ -891,12 +920,23 @@ aside.sidebar-footer .widget_older_post a {
 .well.classes-thumbnail.classes-header .btn-transparent:after {
   content: '';
   position: absolute;
-  left: 5rem;
-  top: 0.75rem;
+  left: 5.5rem;
+  top: 0.899rem;
   display: block;
   width: 0.5rem;
   height: 0.5rem;
   transform: rotate(-45deg); }
+
+.well.classes-thumbnail.classes-header .btn-transparent:hover:after {
+  content: '';
+  position: absolute;
+  left: 6.5rem;
+  top: 0.899rem;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(-45deg);
+  transition: all 0.2s ease-in-out; }
 
 .section-icon {
   display: block;
@@ -941,7 +981,7 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
   float: left;
   margin-right: 5%; }
   .trainers-carousel-header .btn-filled {
-    padding: 0.5rem 1.5rem; }
+    padding: 1rem 2.5rem; }
   .trainers-carousel-header h2 {
     margin: 3rem 0; }
 
@@ -1024,7 +1064,8 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
   .news-feed .news-feed-header .btn-filled {
     position: relative;
     float: right;
-    margin: 45px 0 35px 0; }
+    margin: 75px 0 35px 0;
+    padding: .5rem 2.5rem; }
   .news-feed .news-feed-header:after {
     content: '';
     clear: both; }
@@ -1067,12 +1108,12 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
         margin: 0 50% 0 0;
         height: 2px; }
 
-aside.banner .container .yoga-banner-header {
+aside.row .container.banner .yoga-banner-header {
   height: 395px;
   padding: 45px; }
-  aside.banner .container .yoga-banner-header .yoga-banner-title .title-caption {
+  aside.row .container.banner .yoga-banner-header .yoga-banner-title .title-caption {
     display: block; }
-  aside.banner .container .yoga-banner-header .btn-filled {
+  aside.row .container.banner .yoga-banner-header .btn-filled {
     margin-top: 2rem;
     padding: 0.5rem 1.5rem; }
 
@@ -1836,6 +1877,9 @@ aside.sidebar-footer .widget_older_post {
 .classes-thumbnail img {
   max-width: 340px; }
 
+.xs-index-hero .btn-filled {
+  margin-left: -15px; }
+
 .site-header {
   position: absolute;
   top: 0;
@@ -1904,6 +1948,15 @@ aside.sidebar-footer .widget_older_post {
         .site-header .navbar-transparent .container #topNavbar .navbar-right li a:hover {
           z-index: 2;
           background-color: transparent; }
+        .site-header .navbar-transparent .container #topNavbar .navbar-right li a:active {
+          z-index: 2;
+          background-color: transparent; }
+        .site-header .navbar-transparent .container #topNavbar .navbar-right li a:focus {
+          z-index: 2;
+          background-color: transparent; }
+        .site-header .navbar-transparent .container #topNavbar .navbar-right li a:visited {
+          z-index: 2;
+          background-color: transparent; }
         .site-header .navbar-transparent .container #topNavbar .navbar-right li hr {
           z-index: 1; }
 
@@ -1913,6 +1966,12 @@ aside.sidebar-footer .widget_older_post {
   .nav > li > a:hover {
     color: #fff;
     background: inherit; }
+  .nav > li > a:active {
+    color: #fff; }
+  .nav > li > a:focus {
+    color: #fff; }
+  .nav > li > a:visited {
+    color: #fff; }
 
 .navbar-tel:before {
   background: linear-gradient(to right, #0b3a9f 0%, #0b3a9f 100%, rgba(11, 58, 159, 0) 150%, transparent 200%);
@@ -2367,18 +2426,19 @@ aside.sidebar-footer .widget_older_post {
   #trainersCarousel .carousel-inner .item.active img ~ .carousel-caption {
     opacity: 0;
     width: 0;
-    left: 70%;
+    left: 35%;
     right: -10%;
     z-index: 21;
     bottom: 0;
     top: auto; }
   #trainersCarousel .carousel-inner .item.active .item-inner:hover img ~ .carousel-caption {
     opacity: 1;
-    width: 110%;
+    width: 50%;
     padding: 10px;
     z-index: 21;
     bottom: 0;
     top: 60%;
+    right: 0;
     transition: all 0.5s ease-in-out; }
   .reviews-carousel .reviews-header .reviews-title {
     margin-bottom: 45px; }
@@ -2636,7 +2696,8 @@ aside.sidebar-footer .widget_older_post {
       .instagallery .gallery-item:nth-child(2) {
         display: block; }
   .classes-man .well.classes-thumbnail:nth-child(4),
-  .classes-woman .well.classes-thumbnail:nth-child(4) {
+  .classes-woman .well.classes-thumbnail:nth-child(4),
+  .news-feed .news-wrapper .news-link:nth-child(4) {
     display: none; }
   #trainersCarousel .carousel-inner .item .item-inner {
     display: inline-block;
@@ -2735,5 +2796,6 @@ aside.sidebar-footer .widget_older_post {
     width: 16vw;
     height: 16vw; }
   .classes-man .well.classes-thumbnail:nth-child(4),
-  .classes-woman .well.classes-thumbnail:nth-child(4) {
+  .classes-woman .well.classes-thumbnail:nth-child(4),
+  .news-feed .news-wrapper .news-link:nth-child(4) {
     display: flex; } }

@@ -24,11 +24,21 @@ body {
     color: #fff; }
 
 .well.classes-thumbnail.classes-header .btn-transparent {
-  border-top: 1px solid #f1f2f4; }
+  border-top: 1px solid rgba(186, 186, 186, 0.5); }
 
 .well.classes-thumbnail.classes-header .btn-transparent:after {
   border-right: 2px solid #0b3a9f;
   border-bottom: 2px solid #0b3a9f; }
+
+.well.classes-thumbnail.classes-header .btn-transparent:hover:after {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000; }
+
+.classes-man .classes-thumbnail .classes-title {
+  color: #000; }
+
+.classes-man .classes-thumbnail:hover .classes-title {
+  color: #0b3a9f; }
 
 #trainersCarousel .carousel-control.left,
 #trainersCarousel .carousel-control.right {

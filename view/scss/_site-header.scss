@@ -86,6 +86,18 @@
                 z-index: 2;
                 background-color: transparent;
               }
+              &:active{
+                z-index: 2;
+                background-color: transparent;
+              }
+              &:focus{
+                z-index: 2;
+                background-color: transparent;
+              }
+              &:visited{
+                z-index: 2;
+                background-color: transparent;
+              }
             }
             hr{
               z-index: 1;
@@ -102,6 +114,15 @@
   &:hover{
     color:#fff;
     background: inherit;
+  }
+  &:active{
+    color:#fff;
+  }
+  &:focus{
+    color:#fff;
+  }
+  &:visited{
+    color:#fff;
   }
 }
 .navbar-tel:before{

@@ -34,11 +34,21 @@ body{
   }
 }
 .well.classes-thumbnail.classes-header .btn-transparent{
-  border-top:1px solid $background;
+  border-top:1px solid transparentize($darkGray, .5);
 }
 .well.classes-thumbnail.classes-header .btn-transparent:after{
   border-right:2px solid $brand;
   border-bottom:2px solid $brand;
+}
+.well.classes-thumbnail.classes-header .btn-transparent:hover:after{
+  border-right:2px solid $black;
+  border-bottom:2px solid $black;
+}
+.classes-man .classes-thumbnail .classes-title{
+  color:$black;
+}
+.classes-man .classes-thumbnail:hover .classes-title{
+  color:$brand;  
 }
 #trainersCarousel .carousel-control.left,
 #trainersCarousel .carousel-control.right {

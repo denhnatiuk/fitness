@@ -17,26 +17,6 @@
     <meta name="keywords" content="fitness, health, sports">
     <link rel="manifest" href="./manifest.json">
     <meta name="theme_color" content="#0b3a9f">
-
-    <style>
-      .v-slide{
-        width:100%;
-        filter:blur(115px);
-      }
-      .v-slide.is-loaded{
-        filter:none;
-        transition: filter 0.3s ease-in-out;
-      }
-    </style>
-    <script>
-    window.addEventListener('load', function() {
-      var img = document.querySelectorAll('.v-slide');
-      for(let i=0; i<img.length; i++){
-        img[i].src = img[i].dataset.fullsize;
-        img[i].classList += 'is-loaded';
-      }
-    });
-    </script>
   </head>
   <body class="home-page">
     <header class="site-header header">
@@ -330,7 +310,7 @@
         </div>
       </section>
       <aside class="section row banner">
-        <div class="container">
+        <div class="container banner">
           <div class="yoga-banner-header">
             <span class="yoga-banner-title-sup">New workouts</span>
             <h2 class="yoga-banner-title">SPECIAL FITNESS TRAINING <span class="title-caption">FOR PREGNANT WOMEN</span></h2>
@@ -573,6 +553,16 @@
                 });
             });
         });
+      });
+      </script>
+      <script>
+      // lazyload images
+      window.addEventListener('load', function() {
+        var img = document.querySelectorAll('.v-slide');
+        for(let i=0; i<img.length; i++){
+          img[i].src = img[i].dataset.fullsize;
+          img[i].classList += 'is-loaded';
+        }
       });
       </script>
       <script>
