@@ -179,14 +179,67 @@
         position: absolute;
         top: 60%;
         &.left{
-          left:-55px;
+          left:2rem;
         }
         &.right{
-          left:15px;
-          right:auto;
+          right:-15px;
+          // right:auto;
         }
       }
+      .carousel-caption{
+        opacity:0;
+        width:0;
+        left:auto;
+        right:-10%;
+        z-index: 21;
+        bottom:0;
+        top:auto;
+      }
     }
+  }
+  #trainersCarousel .carousel-inner .item .item-inner{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height:325px;
+    width:95%;
+    & img{
+      position: absolute;
+      height:325px;
+      left:15%;
+      z-index: 10;
+    }
+    & .carousel-caption{
+        opacity:0;
+        width:0;
+        padding:0;
+        // z-index: -1;
+        position: relative;
+        float: left;
+        left:65%;
+        right:-65%;
+        bottom: 20%;
+        top:30%;
+        display: block;
+    }
+  }
+  #trainersCarousel .carousel-inner .item.active img ~ .carousel-caption{
+    opacity:0;
+    width:0;
+    left:70%;
+    right:-10%;
+    z-index: 21;
+    bottom:0;
+    top:auto;
+  }
+  #trainersCarousel .carousel-inner .item.active .item-inner:hover img~ .carousel-caption{
+    opacity:1;
+    width:110%;
+    padding:10px;
+    z-index: 21;
+    bottom:0;
+    top:60%;
+    transition: all 0.5s ease-in-out;
   }
   .reviews-carousel{
     .reviews-header{
@@ -209,8 +262,7 @@
               max-width:50%;
               margin-left:50%;
             }
-            .carousel-caption .reviewer-occupation
-            {
+            .carousel-caption .reviewer-occupation{
               display: block;
               margin:0;
               width:100%;
@@ -256,12 +308,16 @@
   .template-classes .section.gender-filter{
     padding-top:95px;
   }
+  .template-classes .section.gender-filter{
+    overflow-x: hidden;
+  }
   .template-classes .section.gender-filter .filter-male{
     margin:30px 0;
     padding: 30px 120px 30px 30px;
     .filter-thumbnail{
-      max-width:85%;
-      right:-47%;
+      height:107%;
+      // max-width:66%;
+      right:-34%;
     }
     .filter-title{
       text-align: left;
@@ -275,8 +331,36 @@
     padding: 30px 30px 30px 120px;
     text-align: right;
     .filter-thumbnail{
-      max-width:95%;
-      left:-47%;
+      height:100%;
+      // max-width:74%;
+      left:-34%;
+    }
+  }
+  @media screen and (min-width:400px) and (max-width:576px){
+    .template-classes .section.gender-filter .filter-male{
+      margin:30px 0;
+      padding: 30px 120px 30px 30px;
+      .filter-thumbnail{
+        height:107%;
+        // max-width:66%;
+        right:-24%;
+      }
+      .filter-title{
+        text-align: left;
+      }
+      .description{
+        text-align: left;
+      }
+    }
+    .template-classes .section.gender-filter .filter-female{
+      margin:30px 0;
+      padding: 30px 30px 30px 120px;
+      text-align: right;
+      .filter-thumbnail{
+        height:100%;
+        // max-width:74%;
+        left:-24%;
+      }
     }
   }
   .site-footer{
@@ -294,6 +378,6 @@
     right:16px;
   }
   #reviewslider .carousel-control.left span{
-    left:16px;    
+    left:16px;
   }
 }

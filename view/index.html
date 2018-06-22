@@ -233,7 +233,7 @@
                 <div class="item-inner">
                   <img alt="Trainer" src="./images/trainer-1.png" class="trainer-thumbnail">
                   <div class="carousel-caption">
-                      <h3 class="trainers-name">Victoria Kilman</h3>
+                      <h3 class="trainers-name">Victoria<br> Kilman</h3>
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@
                 <div class="item-inner">
                     <img alt="Trainer" src="./images/trainer-2.png" class="trainer-thumbnail">
                     <div class="carousel-caption">
-                        <h3 class="trainers-name">Victoria Kilman</h3>
+                        <h3 class="trainers-name">Victoria<br> Kilman</h3>
                     </div>
                 </div>
               </div>
@@ -249,7 +249,7 @@
                 <div class="item-inner">
                     <img alt="Trainer" src="./images/trainer-3.png" class="trainer-thumbnail">
                     <div class="carousel-caption">
-                        <h3 class="trainers-name">Victoria Kilman</h3>
+                        <h3 class="trainers-name">Victoria<br> Kilman</h3>
                     </div>
                 </div>
               </div>
@@ -257,7 +257,7 @@
                   <div class="item-inner">
                     <img alt="Trainer" src="./images/trainer-1.png" class="trainer-thumbnail">
                     <div class="carousel-caption">
-                        <h3 class="trainers-name">Victoria Kilman</h3>
+                        <h3 class="trainers-name">Victoria<br> Kilman</h3>
                     </div>
                 </div>
               </div>
@@ -265,7 +265,7 @@
                   <div class="item-inner">
                     <img alt="Trainer" src="./images/trainer-2.png" class="trainer-thumbnail">
                     <div class="carousel-caption">
-                        <h3 class="trainers-name">Victoria Kilman</h3>
+                        <h3 class="trainers-name">Victoria<br> Kilman</h3>
                     </div>
                 </div>
               </div>
@@ -273,7 +273,7 @@
                   <div class="item-inner">
                     <img alt="Trainer" src="./images/trainer-3.png" class="trainer-thumbnail">
                     <div class="carousel-caption">
-                        <h2 class="trainers-name">Victoria Kilman</h2>
+                        <h3 class="trainers-name">Victoria<br> Kilman</h3>
                     </div>
                 </div>
               </div>
@@ -470,23 +470,25 @@
           allowPageScroll:"vertical"
         });
         // trainers carousel
-        $('#trainersCarousel .item').each(function(){
-          var next = $(this).next();
-          if (!next.length) {
-            next = $(this).siblings(':first');
-          }
-
-          if(viewport > 800){
-            next.children(':first-child').clone().appendTo($(this));
-            if (next.next().length>0) {
-              next.next().children(':first-child').clone().appendTo($(this));
+        if(viewport > 576){
+          $('#trainersCarousel .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+              next = $(this).siblings(':first');
             }
-            else {
-            	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            if(viewport > 767){
+              next.children(':first-child').clone().appendTo($(this));
+              if(viewport > 991){
+                if (next.next().length>0) {
+                    next.next().children(':first-child').clone().appendTo($(this));
+                }
+                else {
+                    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+                }
+              }
             }
-          }
-
-        });
+          });
+        }
         $("#trainersCarousel").carousel({
           interval:10000
         });

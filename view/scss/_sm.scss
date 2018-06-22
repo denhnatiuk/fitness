@@ -58,4 +58,88 @@
 
     }
   }
+  #trainersCarousel .carousel-inner .item .item-inner{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height:325px;
+    width:49%;
+    & img{
+      position: absolute;
+      height:325px;
+      left:15%;
+      z-index: 10;
+    }
+    & .carousel-caption{
+        opacity:0;
+        width:0;
+        padding:0;
+        position: relative;
+        float: left;
+        margin-left: -30px;
+        left:55%;
+        right:-65%;
+        bottom: 20%;
+        top:30%;
+        display: block;
+    }
+  }
+  #trainersCarousel .carousel-inner .item.next {
+    transform: translateX(50%);
+  }
+  #trainersCarousel .carousel-inner .item.prev {
+    transform: translateX(-50%);
+  }
+  #trainersCarousel .carousel-inner .item.right{
+    transform: translateX(0);
+  }
+  #trainersCarousel .carousel-inner .item.left {
+    transform: translateX(0);
+  }
+  #trainersCarousel .carousel-inner .item.left.active {
+    transform: translateX(-50%);
+  }
+  #trainersCarousel .carousel-inner .item.right.active {
+    transform: translateX(50%);
+  }
+  .template-classes .section.gender-filter .filter-male{
+    margin-top: 100px;
+    position: relative;
+    padding: 46px 50%  46px 46px;
+    .filter-title{
+      margin-bottom: 25px;
+    }
+    .filter-thumbnail{
+      position: absolute;
+      bottom:-17px;
+      right:0;
+    }
+    .description{
+      margin-bottom: 25px;
+    }
+    .btn-border{
+      float: right;
+      margin-bottom: 15px;
+    }
+  }
+  .template-classes .section.gender-filter .filter-female{
+    margin-top: 100px;
+    position: relative;
+    padding: 46px 46px 46px 50%;
+    .filter-title{
+      margin-bottom: 25px;
+    }
+    .filter-thumbnail{
+      position: absolute;
+      bottom:-17px;
+      left:0;
+      // transform: scale(1.2);
+    }
+    .description{
+      margin-bottom: 25px;
+    }
+    .btn-border{
+      margin-bottom: 15px;
+    }
+  }
 }

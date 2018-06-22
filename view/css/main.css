@@ -951,80 +951,38 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
   top: -30px; }
 
 #trainersCarousel .carousel-inner > .item.active {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
   overflow-x: hidden; }
 
 #trainersCarousel .carousel-inner > .item.active > .item-inner {
   position: relative;
-  display: block; }
-
-#trainersCarousel .carousel-inner .item.left.active {
-  transform: translateX(-33%); }
-
-#trainersCarousel .carousel-inner .item.right.active {
-  transform: translateX(33%); }
-
-#trainersCarousel .carousel-inner .item.next {
-  transform: translateX(33%); }
-
-#trainersCarousel .carousel-inner .item.prev {
-  transform: translateX(-33%); }
-
-@media screen and (max-width: 576px) {
-  #trainersCarousel .carousel-inner .item.next {
-    transform: translateX(150%); }
-  #trainersCarousel .carousel-inner .item.prev {
-    transform: translateX(50%); }
-  #trainersCarousel .carousel-inner .item.right,
-  #trainersCarousel .carousel-inner .item.left {
-    transform: translateX(0); } }
-
-#trainersCarousel .carousel-inner .item.right,
-#trainersCarousel .carousel-inner .item.left {
-  transform: translateX(33%); }
-
-#trainersCarousel .carousel-inner .item .item-inner {
-  position: relative;
-  height: 325px;
-  width: 33%;
-  padding-left: 5%; }
-  #trainersCarousel .carousel-inner .item .item-inner img {
-    position: absolute;
-    height: 325px;
-    left: 0;
-    z-index: 10; }
-    #trainersCarousel .carousel-inner .item .item-inner img ~ .carousel-caption {
-      opacity: 0;
-      width: 0;
-      padding: 0;
-      z-index: -1;
-      position: relative;
-      float: left;
-      left: 30%;
-      right: -20%;
-      bottom: 20%;
-      top: 30%;
-      left: auto;
-      text-align: center;
-      display: block; }
+  display: inline-block; }
 
 #trainersCarousel .carousel-inner .item.active img {
   height: 325px; }
 
+#trainersCarousel .carousel-inner .item.active .item-inner:hover img {
+  z-index: 20; }
+
 #trainersCarousel .carousel-inner .item.active img ~ .carousel-caption {
   opacity: 0;
-  left: auto;
-  right: -10%; }
+  width: 0; }
 
 #trainersCarousel .carousel-inner .item.active .item-inner:hover img ~ .carousel-caption {
   opacity: 1;
-  width: 90%;
-  padding: 20px 20px 20px 40%;
+  width: 80%;
+  right: 30%;
+  padding: 20px 20px 20px 30%;
+  z-index: 11;
   transition: all 0.5s ease-in-out; }
+
+#trainersCarousel .carousel-inner .item.active .item-inner:not(:first-child):last-child:hover img ~ .carousel-caption {
+  opacity: 1;
+  left: -30%;
+  right: 0;
+  width: 80%;
+  padding: 20px 30% 20px 20px; }
+  #trainersCarousel .carousel-inner .item.active .item-inner:not(:first-child):last-child:hover img ~ .carousel-caption .trainers-name {
+    text-align: left; }
 
 #trainersCarousel .carousel-control.left,
 #trainersCarousel .carousel-control.right {
@@ -1037,7 +995,7 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
 
 #trainersCarousel .carousel-control.right {
   left: auto;
-  right: 0; }
+  right: -15px; }
 
 #trainersCarousel .carousel-control .glyphicon-chevron-left,
 #trainersCarousel .carousel-control .glyphicon-chevron-right,
@@ -2373,10 +2331,55 @@ aside.sidebar-footer .widget_older_post {
     position: absolute;
     top: 60%; }
     .trainers-carousel #trainersCarousel .carousel-control.left {
-      left: -55px; }
+      left: 2rem; }
     .trainers-carousel #trainersCarousel .carousel-control.right {
-      left: 15px;
-      right: auto; }
+      right: -15px; }
+  .trainers-carousel #trainersCarousel .carousel-caption {
+    opacity: 0;
+    width: 0;
+    left: auto;
+    right: -10%;
+    z-index: 21;
+    bottom: 0;
+    top: auto; }
+  #trainersCarousel .carousel-inner .item .item-inner {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height: 325px;
+    width: 95%; }
+    #trainersCarousel .carousel-inner .item .item-inner img {
+      position: absolute;
+      height: 325px;
+      left: 15%;
+      z-index: 10; }
+    #trainersCarousel .carousel-inner .item .item-inner .carousel-caption {
+      opacity: 0;
+      width: 0;
+      padding: 0;
+      position: relative;
+      float: left;
+      left: 65%;
+      right: -65%;
+      bottom: 20%;
+      top: 30%;
+      display: block; }
+  #trainersCarousel .carousel-inner .item.active img ~ .carousel-caption {
+    opacity: 0;
+    width: 0;
+    left: 70%;
+    right: -10%;
+    z-index: 21;
+    bottom: 0;
+    top: auto; }
+  #trainersCarousel .carousel-inner .item.active .item-inner:hover img ~ .carousel-caption {
+    opacity: 1;
+    width: 110%;
+    padding: 10px;
+    z-index: 21;
+    bottom: 0;
+    top: 60%;
+    transition: all 0.5s ease-in-out; }
   .reviews-carousel .reviews-header .reviews-title {
     margin-bottom: 45px; }
   .reviews-carousel .container:nth-child(2) {
@@ -2418,12 +2421,14 @@ aside.sidebar-footer .widget_older_post {
     padding: 0; }
   .template-classes .section.gender-filter {
     padding-top: 95px; }
+  .template-classes .section.gender-filter {
+    overflow-x: hidden; }
   .template-classes .section.gender-filter .filter-male {
     margin: 30px 0;
     padding: 30px 120px 30px 30px; }
     .template-classes .section.gender-filter .filter-male .filter-thumbnail {
-      max-width: 85%;
-      right: -47%; }
+      height: 107%;
+      right: -34%; }
     .template-classes .section.gender-filter .filter-male .filter-title {
       text-align: left; }
     .template-classes .section.gender-filter .filter-male .description {
@@ -2433,8 +2438,29 @@ aside.sidebar-footer .widget_older_post {
     padding: 30px 30px 30px 120px;
     text-align: right; }
     .template-classes .section.gender-filter .filter-female .filter-thumbnail {
-      max-width: 95%;
-      left: -47%; }
+      height: 100%;
+      left: -34%; } }
+
+@media screen and (max-width: 576px) and (min-width: 400px) and (max-width: 576px) {
+  .template-classes .section.gender-filter .filter-male {
+    margin: 30px 0;
+    padding: 30px 120px 30px 30px; }
+    .template-classes .section.gender-filter .filter-male .filter-thumbnail {
+      height: 107%;
+      right: -24%; }
+    .template-classes .section.gender-filter .filter-male .filter-title {
+      text-align: left; }
+    .template-classes .section.gender-filter .filter-male .description {
+      text-align: left; }
+  .template-classes .section.gender-filter .filter-female {
+    margin: 30px 0;
+    padding: 30px 30px 30px 120px;
+    text-align: right; }
+    .template-classes .section.gender-filter .filter-female .filter-thumbnail {
+      height: 100%;
+      left: -24%; } }
+
+@media screen and (max-width: 576px) {
   .site-footer .navbar-left {
     display: none; }
   .site-footer .social-navbar {
@@ -2487,7 +2513,71 @@ aside.sidebar-footer .widget_older_post {
     .site-header .navbar-transparent .container .navbar-collapse.collapse.in {
       display: block; }
     .site-header .navbar-transparent .container .navbar-collapse.collapse .navbar-left {
-      display: none; } }
+      display: none; }
+  #trainersCarousel .carousel-inner .item .item-inner {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height: 325px;
+    width: 49%; }
+    #trainersCarousel .carousel-inner .item .item-inner img {
+      position: absolute;
+      height: 325px;
+      left: 15%;
+      z-index: 10; }
+    #trainersCarousel .carousel-inner .item .item-inner .carousel-caption {
+      opacity: 0;
+      width: 0;
+      padding: 0;
+      position: relative;
+      float: left;
+      margin-left: -30px;
+      left: 55%;
+      right: -65%;
+      bottom: 20%;
+      top: 30%;
+      display: block; }
+  #trainersCarousel .carousel-inner .item.next {
+    transform: translateX(50%); }
+  #trainersCarousel .carousel-inner .item.prev {
+    transform: translateX(-50%); }
+  #trainersCarousel .carousel-inner .item.right {
+    transform: translateX(0); }
+  #trainersCarousel .carousel-inner .item.left {
+    transform: translateX(0); }
+  #trainersCarousel .carousel-inner .item.left.active {
+    transform: translateX(-50%); }
+  #trainersCarousel .carousel-inner .item.right.active {
+    transform: translateX(50%); }
+  .template-classes .section.gender-filter .filter-male {
+    margin-top: 100px;
+    position: relative;
+    padding: 46px 50%  46px 46px; }
+    .template-classes .section.gender-filter .filter-male .filter-title {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-male .filter-thumbnail {
+      position: absolute;
+      bottom: -17px;
+      right: 0; }
+    .template-classes .section.gender-filter .filter-male .description {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-male .btn-border {
+      float: right;
+      margin-bottom: 15px; }
+  .template-classes .section.gender-filter .filter-female {
+    margin-top: 100px;
+    position: relative;
+    padding: 46px 46px 46px 50%; }
+    .template-classes .section.gender-filter .filter-female .filter-title {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-female .filter-thumbnail {
+      position: absolute;
+      bottom: -17px;
+      left: 0; }
+    .template-classes .section.gender-filter .filter-female .description {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-female .btn-border {
+      margin-bottom: 15px; } }
 
 @media screen and (min-width: 768px) {
   .well.classes-thumbnail {
@@ -2547,7 +2637,95 @@ aside.sidebar-footer .widget_older_post {
         display: block; }
   .classes-man .well.classes-thumbnail:nth-child(4),
   .classes-woman .well.classes-thumbnail:nth-child(4) {
-    display: none; } }
+    display: none; }
+  #trainersCarousel .carousel-inner .item .item-inner {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height: 325px;
+    width: 33%; }
+    #trainersCarousel .carousel-inner .item .item-inner img {
+      position: absolute;
+      height: 325px;
+      left: 15%;
+      z-index: 10; }
+      #trainersCarousel .carousel-inner .item .item-inner img ~ .carousel-caption {
+        opacity: 0;
+        width: 0;
+        padding: 0;
+        position: relative;
+        float: left;
+        left: 65%;
+        right: -65%;
+        bottom: 20%;
+        top: 30%;
+        display: block; }
+  #trainersCarousel .carousel-inner .item.next {
+    transform: translateX(33%); }
+  #trainersCarousel .carousel-inner .item.prev {
+    transform: translateX(-33%); }
+  #trainersCarousel .carousel-inner .item.right {
+    transform: translateX(0); }
+  #trainersCarousel .carousel-inner .item.left {
+    transform: translateX(0%); }
+  #trainersCarousel .carousel-inner .item.left.active {
+    transform: translateX(-33%); }
+  #trainersCarousel .carousel-inner .item.right.active {
+    transform: translateX(33%); }
+  #trainersCarousel .carousel-inner .item.active .item-inner:hover img ~ .carousel-caption {
+    opacity: 1;
+    width: 100%;
+    right: auto;
+    padding: 20px 20px 20px 30%;
+    z-index: 11;
+    transition: all 0.5s ease-in-out;
+    text-align: right; }
+  #trainersCarousel .carousel-inner .item.active .item-inner:last-child:hover:not(:first-child) img ~ .carousel-caption {
+    opacity: 1;
+    right: 65%;
+    text-align: left;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 20px 30% 20px 20px; }
+  .template-classes .section.gender-filter .filter-male {
+    position: relative;
+    padding: 46px 120px  46px 46px; }
+    .template-classes .section.gender-filter .filter-male .filter-title {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-male .filter-thumbnail {
+      position: absolute;
+      bottom: -17px;
+      right: -58%; }
+    .template-classes .section.gender-filter .filter-male .description {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-male .btn-border {
+      float: right;
+      margin-bottom: 15px; }
+  .template-classes .section.gender-filter .filter-female {
+    position: relative;
+    padding: 46px 46px 46px 120px; }
+    .template-classes .section.gender-filter .filter-female .filter-title {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-female .filter-thumbnail {
+      position: absolute;
+      bottom: -17px;
+      left: -64%; }
+    .template-classes .section.gender-filter .filter-female .description {
+      margin-bottom: 25px; }
+    .template-classes .section.gender-filter .filter-female .btn-border {
+      margin-bottom: 15px; }
+  #reviewslider .carousel-inner .item.next {
+    transform: translateX(50%); }
+  #reviewslider .carousel-inner .item.prev {
+    transform: translateX(-50%); }
+  #reviewslider .carousel-inner .item.right {
+    transform: translateX(0); }
+  #reviewslider .carousel-inner .item.left {
+    transform: translateX(0); }
+  #reviewslider .carousel-inner .item.left.active {
+    transform: translateX(-50%); }
+  #reviewslider .carousel-inner .item.right.active {
+    transform: translateX(50%); } }
 
 @media screen and (min-width: 1200px) {
   .instagallery .instagallery-header {
