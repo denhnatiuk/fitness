@@ -1,0 +1,156 @@
+@media screen and (min-width:992px){
+  .instagallery{
+    position: relative;
+    .instagallery-header{
+      width:16vw;
+      height:16vw;
+      position: absolute;
+      left:17vw;
+      top:0;
+    }
+    .gallery-item{
+      width:16vw;
+      height:16vw;
+      &:nth-child(2){
+        display: block;
+      }
+    }
+  }
+  .classes-man .well.classes-thumbnail:nth-child(4),
+  .classes-woman .well.classes-thumbnail:nth-child(4),
+  .news-feed .news-wrapper .news-link:nth-child(4){
+    display: none;
+  }
+  #trainersCarousel .carousel-inner .item .item-inner{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height:325px;
+    width:33%;
+    & img{
+      position: absolute;
+      height:325px;
+      left:15%;
+      z-index: 10;
+      &~ .carousel-caption{
+        opacity:0;
+        width:0;
+        padding:0;
+        // z-index: -1;
+        position: relative;
+        float: left;
+        left:65%;
+        right:-65%;
+        bottom: 20%;
+        top:30%;
+        display: block;
+      }
+    }
+  }
+  #trainersCarousel .carousel-inner .item.next {
+    transform: translateX(33%)
+    // opacity: 0;
+  }
+  #trainersCarousel .carousel-inner .item.prev {
+    transform: translateX(-33%)
+  }
+  #trainersCarousel .carousel-inner .item.right{
+    transform: translateX(0);
+  }
+  #trainersCarousel .carousel-inner .item.left {
+    transform: translateX(0%);
+  }
+  #trainersCarousel .carousel-inner .item.left.active {
+    transform: translateX(-33%);
+  }
+  #trainersCarousel .carousel-inner .item.right.active {
+    transform: translateX(33%);
+  }
+  #trainersCarousel .carousel-inner .item.active .item-inner:hover img~ .carousel-caption{
+    opacity:1;
+    width:100%;
+    right:auto;
+    padding:20px 20px 20px 30%;
+    z-index: 11;
+    transition: all 0.5s ease-in-out;
+    text-align: right;
+  }
+  #trainersCarousel .carousel-inner .item.active .item-inner:last-child:hover:not(:first-child) img ~ .carousel-caption{
+    opacity:1;
+    right:65%;
+    text-align: left;
+    box-sizing: border-box;
+    width:80%;
+    padding:20px 30% 20px 20px;
+  }
+  .template-classes .section.gender-filter .filter-male{
+    position: relative;
+    padding: 46px 120px  46px 46px;
+    .filter-title{
+      margin-bottom: 25px;
+    }
+    .filter-thumbnail{
+      position: absolute;
+      bottom:-17px;
+      right:-58%;
+    }
+    .description{
+      margin-bottom: 25px;
+    }
+    .btn-border{
+      float: right;
+      margin-bottom: 15px;
+    }
+  }
+  .template-classes .section.gender-filter .filter-female{
+    position: relative;
+    padding: 46px 46px 46px 120px;
+    .filter-title{
+      margin-bottom: 25px;
+    }
+    .filter-thumbnail{
+      position: absolute;
+      bottom:-17px;
+      left:-64%;
+      // transform: scale(1.2);
+    }
+    .description{
+      margin-bottom: 25px;
+    }
+    .btn-border{
+      margin-bottom: 15px;
+    }
+  }
+  #reviewslider{
+    .carousel-inner{
+      .item{
+        &.next {
+          transform: translateX(50%);
+        }
+        &.prev {
+          transform: translateX(-50%);
+        }
+        &.right{
+          transform: translateX(0);
+        }
+        &.left {
+          transform: translateX(0);
+        }
+        &.left.active {
+          transform: translateX(-50%);
+        }
+        &.right.active {
+          transform: translateX(50%);
+        }
+      }
+    }
+  }
+  .contacts-section{
+    position:relative;
+    .contacts-container{
+      position: absolute;
+      top:0;
+      left:50%;
+    }
+  }
+}

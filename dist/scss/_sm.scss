@@ -1,0 +1,148 @@
+@media screen and (min-width:576px) {
+  .well.classes-thumbnail{
+    max-width: 23%;
+  }
+  .instagallery{
+    position: relative;
+    .instagallery-header{
+      width:47vw;
+      height:47vw;
+      position: relative;
+      left:auto;
+      top:auto;
+    }
+    .gallery-item{
+      width:47vw;
+      height:47vw;
+      &:nth-child(2){
+        display: none;
+      }
+    }
+  }
+  .site-header .navbar-transparent .container .navbar-header {
+    height:100px;
+    .navbar-brand{
+      .brand-title{
+        background: linear-gradient(to right, #0b3a9f 0%, #0b3a9f 40%, transparent 40%, transparent 100%);
+      }
+    }
+    .navbar-toggle{
+      border:1px solid #fff;
+      & .icon-bar{
+        background-color:  #fff;
+      }
+      &.collapsed{
+        border:1px solid #0b3a9f;
+        & .icon-bar{
+          background-color:  #0b3a9f;
+        }
+      }
+    }
+  }
+  .site-header .navbar-transparent .container .navbar-collapse.collapse{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding: 50px 30px 0;
+    text-align: right;
+    background-color:  #0b3a9f;
+    display: none;
+    &.in{
+      display: block;
+    }
+    .navbar-left{
+      display: none;
+    }
+    .nav li a{
+
+    }
+  }
+  #trainersCarousel .carousel-inner .item .item-inner{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height:325px;
+    width:49%;
+    & img{
+      position: absolute;
+      height:325px;
+      left:15%;
+      z-index: 10;
+    }
+    & .carousel-caption{
+        opacity:0;
+        width:0;
+        padding:0;
+        position: relative;
+        float: left;
+        margin-left: -30px;
+        left:55%;
+        right:-65%;
+        bottom: 20%;
+        top:30%;
+        display: block;
+    }
+  }
+  #trainersCarousel .carousel-inner .item.next {
+    transform: translateX(50%);
+  }
+  #trainersCarousel .carousel-inner .item.prev {
+    transform: translateX(-50%);
+  }
+  #trainersCarousel .carousel-inner .item.right{
+    transform: translateX(0);
+  }
+  #trainersCarousel .carousel-inner .item.left {
+    transform: translateX(0);
+  }
+  #trainersCarousel .carousel-inner .item.left.active {
+    transform: translateX(-50%);
+  }
+  #trainersCarousel .carousel-inner .item.right.active {
+    transform: translateX(50%);
+  }
+  .template-classes .section.gender-filter .filter-male{
+    margin-top: 100px;
+    position: relative;
+    padding: 46px 50%  46px 46px;
+    .filter-title{
+      margin-bottom: 25px;
+    }
+    .filter-thumbnail{
+      position: absolute;
+      bottom:-17px;
+      right:0;
+    }
+    .description{
+      margin-bottom: 25px;
+    }
+    .btn-border{
+      float: right;
+      margin-bottom: 15px;
+    }
+  }
+  .template-classes .section.gender-filter .filter-female{
+    margin-top: 100px;
+    position: relative;
+    padding: 46px 46px 46px 50%;
+    .filter-title{
+      margin-bottom: 25px;
+    }
+    .filter-thumbnail{
+      position: absolute;
+      bottom:-17px;
+      left:0;
+      // transform: scale(1.2);
+    }
+    .description{
+      margin-bottom: 25px;
+    }
+    .btn-border{
+      margin-bottom: 15px;
+    }
+  }
+  .contacts-section .contacts-container{
+    position: relative;
+  }
+}

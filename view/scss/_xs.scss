@@ -375,10 +375,16 @@
       align-items: center;
     }
   }
+  .template-reviews .reviews .review-item{
+    max-width: 576px;
+  }
   #reviewslider .carousel-control.right span{
     right:16px;
   }
   #reviewslider .carousel-control.left span{
     left:16px;
+  }
+  .contacts-section .contacts-container{
+    position: relative;
   }
 }

@@ -34,7 +34,7 @@
               <li><a href="./index.html">Home</a></li>
               <!-- <li><a href="./about.html">About us</a></li> -->
               <li><a href="./trainers.html">Our Trainers</a></li>
-              <li><a href="./news.html">News</a></li>
+              <li><a href="./newsfeed.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
               <li><a href="./contacts.html">Contacts</a></li>
               <li><a href="./reviews.html">Reviews</a></li>
@@ -120,6 +120,52 @@
             </div>
           </div>
       </section>
+      <section class="section row coach-gallery">
+        <div class="container">
+          <h3 class="title">Gallery</h3>
+          <div class="gallery-wrapper">
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-1.min.png" data-src="./images/lesson-gallery-1.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-2.min.png" data-src="./images/lesson-gallery-2.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-3.min.png" data-src="./images/lesson-gallery-3.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-4.min.png" data-src="./images/lesson-gallery-4.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-5.min.png" data-src="./images/lesson-gallery-5.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-6.min.png" data-src="./images/lesson-gallery-6.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-7.min.png" data-src="./images/lesson-gallery-7.png" alt="" class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item-wrapper">
+              <div class="gallery-item-overlay"></div>
+              <div class="search-icon" data-toggle="modal" data-target="#galleryModal"></div><img src="./images/lesson-gallery-8.min.png" data-src="./images/lesson-gallery-8.png" alt="" class="gallery-thumbnail">
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="galleryModal" role="dialog">
+            <div class="modal-dialog modal-md">
+              <!-- Modal content-->
+              <div id="imgPlaceholder" class="modal-content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="container-fluid site-footer">
       <div class="section row map">
@@ -137,7 +183,7 @@
               <li><a href="/">Home</a></li>
               <!-- <li><a href="./about.html">About us</a></li> -->
               <li class="active"><a href="./trainers.html">Our trainers</a></li>
-              <li><a href="./news.html">News</a></li>
+              <li><a href="./newsfeed.html">News</a></li>
               <li><a href="./classes.html">Classes</a></li>
               <li><a href="./contacts.html">Contacts</a></li>
               <li><a href="./reviews.html">Reviews</a></li>
@@ -235,33 +281,49 @@
       });
       </script>
       <script>
-        // var fallbacks = document.getElementById('scripts'),
-        //        script = document.createElement('script');
-        //
-        // if (!window.jQuery){
-        //    var jquery = './lib/jquery/dist/jquery.min.js';
-        //    script.setAttribute('src', jquery);
-        //    script.setAttribute('defer', "defer");
-        //    fallbacks.appendChild(script);
-        // }
-        // if (typeof(jQuery.fn.modal) !== 'undefined'){
-        //   var bootstrap = './lib/bootstrap/dist/js/bootstrap.min.js';
-        //   script.setAttribute('src', bootstrap);
-        //   script.setAttribute('defer', "defer");
-        //   fallbacks.appendChild(bootstrap);
-        // }
+        "use srtict";
+        // gallery modal-view script
+        if (document.querySelector('.gallery-wrapper')){
+            var icons = document.querySelectorAll('.search-icon');
+            var modal = document.getElementById('galleryModal');
+            var imgPlaceholder = document.getElementById('imgPlaceholder');
+            for (var i=0; i<icons.length; i++){
+              icons[i].addEventListener('click', function(){
+                  imgPlaceholder.innerHTML = '';
+                  var img = this.nextSibling.cloneNode();
+                  img.src = img.dataset.src;
+                  imgPlaceholder.appendChild(img);
+              });
+            }
+        }
       </script>
       <script>
         // trainers stats script
         if (document.querySelectorAll('.stat-value')){
           var stats = document.querySelectorAll('.stat-value');
           for (var stat of stats){
-            let val = stat.dataset.size;
             let span = document.createElement('div');
+            let count = span.cloneNode();
             span.classList += 'stat-length';
-            span.style.width = val*2+'px';
+            count.classList += 'stat-count';
             stat.appendChild(span);
-            stat.innerHTML += val+"%";
+            stat.appendChild(count);
+            function boost(){
+              let val = 1;
+              span.style.width = val*2+'px';
+              count.innerHTML = val+'%';
+              let newVal = stat.dataset.size;
+              for (let i=0; i<newVal; i++){
+                setTimeout(function(){
+                  span.style.width = i*2+'px';
+                  count.innerHTML = i+'%';
+                  // stat.innerHTML += i+"%";
+                  span.style.transition = "all 1s ease-in-out";
+                }, 1000);
+              }
+              span.style.width = val*2+'px';
+            }
+            setTimeout(boost(), 1000);
           }
         }
       </script>

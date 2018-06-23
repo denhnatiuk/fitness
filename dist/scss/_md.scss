@@ -1,0 +1,65 @@
+@media screen and (min-width:768px) {
+  .well.classes-thumbnail{
+    max-width: 23%;
+  }
+  .instagallery{
+    position: relative;
+    .instagallery-header{
+      width:32vw;
+      height:32vw;
+      position: relative;
+      left:auto;
+      top:0;
+    }
+    .gallery-item{
+      width:32vw;
+      height:32vw;
+      &:nth-child(2){
+        display: none;
+      }
+    }
+  }
+  .site-header .navbar-transparent .container .navbar-header {
+    height:50px;
+    .navbar-brand{
+      .brand-title{
+        background: #0b3a9f;
+        // background: linear-gradient(to right, #0b3a9f 0%, #0b3a9f 40%, transparent 40%, transparent 100%);
+      }
+    }
+    .navbar-toggle{
+      border:0;
+      & .icon-bar{
+        background-color:  #fff;
+      }
+      &.collapsed{
+        border:1px solid #0b3a9f;
+        & .icon-bar{
+          background-color:  #0b3a9f;
+        }
+      }
+    }
+  }
+  .site-header .navbar-transparent .container .navbar-collapse.collapse{
+    position: relative;
+    padding:0;
+    top:0;
+    left:auto;
+    right:0;
+    text-align: right;
+    background-color:  transparent;
+    display: none;
+    &.in{
+      display: block;
+    }
+    .navbar-left{
+      display: block;
+    }
+    .nav li a{
+
+    }
+  }
+  .contacts-section .contacts-container{
+    position: relative;
+  }
+}

@@ -1,0 +1,75 @@
+File structure:
+=========================================================================================================
+
+HTML Files:
+The HTML Blog comes with 11 different .html file.
+
+NOTE: all html files contains "lang" parameter value "zxx" for templates. Change it to your language when would use on production server.
+
+CSS Files:
+There is CSS folder with compiled styles in main.css.
+
+JS Files:
+There is JS folder with no custom JS files. All custom JS inlined in page`s footer to boost page loading speed/
+
+SCSS Files:
+There are SCSS folder with 11 .scss files:
+- main.scss contains .scss files compilation order
+- _styles.scss contains main dimensions and indents
+- _fonts.scss connect fonts to document
+- _images.scss set background images
+- _typography.scss declare used fonts parameters
+- _colors.scss contains color schema and all used colors
+- xs.scss file declare specific styles for mobile screens with maximum width 576px;
+- sm.scss file declare specific styles for small screens with minimum width 576px;
+- md.scss file declare specific styles for tablet screens with minimum width 768px;
+- lg.scss file declare specific styles for laptop screens with minimum width 992px;
+- xl.scss file declare specific styles for desktop screens with minimum width 1200px;
+
+NOTE: if you using SCSS compiler you can easily change color schema with changing values of color variables in _colors.scss
+
+Fonts:
+The fonts/ folder contains all the fonts needed for the template to work properly and font license.
+
+Used Third-party Libraries:
+Bootstrap framework CSS and JS files (version 3.3.7)
+Jquery JS library (version 3.3.1)
+Jquery touchSwipe library (version 1.6.18)
+Font-Awesome CSS library (version 4.7.0)
+
+
+Logo
+=========================================================================================================
+Logo aria sizes 170x100 pixels
+
+Images
+=========================================================================================================
+images has semantic names
+  hero images naming (page name)-hero.png
+  thumbnails naming (block name)-thumbnail-(image count).png
+  gallery images naming (block name)-gallery-(image count).png
+large images for vertical slider use lazyload and have "src" attribute for preloaded image and "data-fullsize" attribute for large image
+lazyloading trigger class - "v-slide"
+
+Marker and Map Position
+=========================================================================================================
+Coordinates for marker and map position can be changed in code with latitude(lat) and longitude(lng) parameters:
+code for marker point: "var uluru = {lat: 55.74811, lng: 37.7644236};"
+code for Map Center = "var mapCenter = {lat: 55.74811, lng: 37.7664236};"
+
+marker image can be changed with
+changing URL in code "var marker = './images/marker.png';"
+or by replacing marker.png image in images folder
+
+NOTE: when you would use this template on your production server you might to change Google Maps API key to yours own.
+You can get your api key on https://developers.google.com/maps/documentation/embed/get-api-key
+and replace string "AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4" with it in line of Google API script connecting
+"<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNAatENUDbw8EQgvqRGtz2H30HID3-m_4&callback=initMap"></script>"
+
+Credits
+=========================================================================================================
+We Thanks so much to :
+Bootstrap framework CSS and JS files (version 3.3.7)
+Jquery JS library (version 3.3.1)
+Jquery touchSwipe library (version 1.6.18)
+Font-Awesome CSS library (version 4.7.0)

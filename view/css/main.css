@@ -83,6 +83,22 @@ body {
   .btn-filled:hover {
     color: #fff; }
 
+.chevron-left.white {
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff; }
+
+.chevron-left.black {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000; }
+
+.chevron-right.white {
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff; }
+
+.chevron-right.black {
+  border-top: 2px solid #000;
+  border-right: 2px solid #000; }
+
 .well.classes-thumbnail.classes-header .btn-transparent {
   border-top: 1px solid rgba(186, 186, 186, 0.5); }
 
@@ -94,10 +110,12 @@ body {
   border-right: 2px solid #000;
   border-bottom: 2px solid #000; }
 
-.classes-man .classes-thumbnail .classes-title {
+.classes-man .classes-thumbnail .classes-title,
+.classes-woman .classes-thumbnail .classes-title {
   color: #000; }
 
-.classes-man .classes-thumbnail:hover .classes-title {
+.classes-man .classes-thumbnail:hover .classes-title,
+.classes-woman .classes-thumbnail:hover .classes-title {
   color: #0b3a9f; }
 
 #trainersCarousel .carousel-control.left,
@@ -115,6 +133,10 @@ a.well.classes-thumbnail .classes-thumbnail--overlay {
   background-color: #0b3a9f;
   border: 1px solid #fff;
   outline: 10px solid #0b3a9f; }
+
+.gallery-wrapper .gallery-item-wrapper .gallery-item-overlay {
+  background: linear-gradient(to top, rgba(11, 58, 159, 0.2) 0, rgba(11, 58, 159, 0.5) 100%);
+  filter: saturate(2.5); }
 
 #reviewslider .carousel-inner .item .item-inner img {
   border: 10px solid #f1f2f4;
@@ -135,7 +157,7 @@ a.well.classes-thumbnail .classes-thumbnail--overlay {
   text-shadow: none; }
 
 .news-feed .news-item .news-item-description {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  background: linear-gradient(to top, black 0%, transparent 100%);
   color: #fff; }
   .news-feed .news-item .news-item-description .meta:after {
     border-bottom: 2px solid #fff; }
@@ -189,6 +211,9 @@ a.well.classes-thumbnail .classes-thumbnail--overlay {
       color: #000; }
   .section.trainers-list .trainers-item .trainers-stats .stats-row .stat-value > .stat-length {
     background-color: #0b3a9f; }
+
+aside .yoga-banner-header {
+  color: #0b3a9f; }
 
 #secondary .widget_recent_entries .widget-title:before {
   border-bottom: 2px solid #0b3a9f; }
@@ -303,10 +328,6 @@ aside.sidebar-footer .widget_older_post {
 
 .training-info .schedule .tabs-wrapper .tab-content input[name='time']:disabled + label {
   color: rgba(186, 186, 186, 0.75); }
-
-.training-info .gallery-wrapper .gallery-item-wrapper .gallery-item-overlay {
-  background: linear-gradient(to top, rgba(11, 58, 159, 0.2) 0, rgba(11, 58, 159, 0.5) 100%);
-  filter: saturate(2.5); }
 
 .template-reviews .reviews .review-item .item-inner img {
   border: 10px solid #f1f2f4;
@@ -539,6 +560,10 @@ html, body {
   font-family: 'Lato-Regular';
   font-size: 20px; }
 
+.btn-filled {
+  font-family: 'Lato-Regular';
+  font-size: 15px; }
+
 .reviews-carousel .reviews-header .reviews-title {
   font-family: 'Lato-BlackItalic'; }
 
@@ -643,6 +668,21 @@ html, body {
   font-family: 'Lato-Bold';
   font-size: 16px; }
 
+aside .yoga-banner-header .yoga-banner-title-sup {
+  font-family: 'Lato-Regular';
+  font-size: 20px; }
+
+aside .yoga-banner-header .yoga-banner-title {
+  font-family: 'Lato-LightItalic';
+  font-size: 35px; }
+  aside .yoga-banner-header .yoga-banner-title .title-caption {
+    font-family: 'Lato-BlackItalic';
+    font-size: 35px; }
+
+aside .yoga-banner-header .btn-filled {
+  font-family: 'Lato-Regular';
+  font-size: 15px; }
+
 #secondary .widget_recent_entries ul li a {
   text-decoration: none; }
 
@@ -735,7 +775,8 @@ aside.sidebar-footer .widget_older_post a {
 .classes-woman .classes-header .btn-transparent {
   font-size: 18px; }
 
-.classes-man .classes-thumbnail .classes-title {
+.classes-man .classes-thumbnail .classes-title,
+.classes-woman .classes-thumbnail .classes-title {
   font-family: 'Lato-Bold';
   font-size: 16px; }
 
@@ -778,6 +819,10 @@ aside.sidebar-footer .widget_older_post a {
 .template-coach .section.row.coach-bio .trainer-classes .table thead {
   font-family: 'Lato-Bold';
   font-size: 20px; }
+
+.coach-gallery .title {
+  font-family: 'Lato-Bold';
+  font-size: 25px; }
 
 .template-classes .section.gender-filter .filter-male .filter-title {
   text-align: right; }
@@ -881,9 +926,11 @@ aside.sidebar-footer .widget_older_post a {
   text-decoration: none;
   cursor: pointer; }
 
-.btn-filled:hover {
-  text-decoration: none;
-  cursor: pointer; }
+.btn-filled {
+  padding: 1rem 2.5rem; }
+  .btn-filled:hover {
+    text-decoration: none;
+    cursor: pointer; }
 
 .hero-title-sup {
   z-index: 5; }
@@ -891,6 +938,18 @@ aside.sidebar-footer .widget_older_post a {
 .hero-title ~ .btn-border {
   margin-top: 3rem;
   padding: 1rem 2.25rem; }
+
+.chevron-left {
+  width: .75rem;
+  height: .75rem;
+  transform: rotate(45deg) translate(0.875rem, -0.05rem);
+  display: block; }
+
+.chevron-right {
+  width: .75rem;
+  height: .75rem;
+  transform: rotate(45deg) translate(0.675rem, 0.05rem);
+  display: block; }
 
 .v-slide {
   width: 100%;
@@ -908,7 +967,8 @@ aside.sidebar-footer .widget_older_post a {
   justify-content: center; }
 
 .well.classes-thumbnail.classes-header {
-  padding: 20px; }
+  padding: 20px;
+  width: 262px; }
 
 .well.classes-thumbnail.classes-header .btn-transparent {
   text-align: left;
@@ -1064,8 +1124,8 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
   .news-feed .news-feed-header .btn-filled {
     position: relative;
     float: right;
-    margin: 75px 0 35px 0;
-    padding: .5rem 2.5rem; }
+    margin: 70px 0 35px 0;
+    padding: 1rem 2.5rem; }
   .news-feed .news-feed-header:after {
     content: '';
     clear: both; }
@@ -1107,15 +1167,27 @@ a.well.classes-thumbnail:hover .classes-thumbnail--overlay {
         display: block;
         margin: 0 50% 0 0;
         height: 2px; }
+  .news-feed .news-item:hover {
+    overflow: hidden; }
+    .news-feed .news-item:hover img {
+      width: 130%;
+      margin: -15%;
+      transition: all .3s ease-in-out; }
+    .news-feed .news-item:hover .news-item-description .meta:after {
+      margin: 0;
+      transition: all .3s ease-in-out; }
 
-aside.row .container.banner .yoga-banner-header {
+.section.news-feed .news-wrapper {
+  padding-top: 70px; }
+
+aside.section .container.banner .yoga-banner-header {
   height: 395px;
   padding: 45px; }
-  aside.row .container.banner .yoga-banner-header .yoga-banner-title .title-caption {
+  aside.section .container.banner .yoga-banner-header .yoga-banner-title .title-caption {
     display: block; }
-  aside.row .container.banner .yoga-banner-header .btn-filled {
+  aside.section .container.banner .yoga-banner-header .btn-filled {
     margin-top: 2rem;
-    padding: 0.5rem 1.5rem; }
+    padding: 1rem 2.5rem; }
 
 .reviews-carousel > .container {
   padding: 66px 15px 0; }
@@ -1127,7 +1199,7 @@ aside.row .container.banner .yoga-banner-header {
 
 .reviews-carousel .reviews-header .btn-filled {
   float: right;
-  padding: 0.5rem 1.5rem; }
+  padding: 1rem 2.5rem; }
 
 #reviewslider {
   margin: 0 15px; }
@@ -1366,7 +1438,7 @@ aside.row .container.banner .yoga-banner-header {
     margin-bottom: 1rem; }
 
 .entry-meta {
-  margin-bottom: 23px; }
+  margin-bottom: 20px; }
   .entry-meta .byline {
     padding-right: 2rem; }
     .entry-meta .byline:before {
@@ -1458,7 +1530,7 @@ aside.sidebar-footer .widget_older_post {
       width: 100%;
       border: 0; }
   #comments .comment-respond .comment-form .form-submit .submit {
-    width: 10rem; }
+    width: 12rem; }
 
 .template-coach .section.row.coach-bio .trainer-thumbnail-wrapper {
   padding-top: 50px; }
@@ -1528,6 +1600,10 @@ aside.sidebar-footer .widget_older_post {
     margin-bottom: 25px; }
   .template-coach .section.row.coach-bio .trainer-classes .table tbody tr td {
     border: 0; }
+
+.coach-gallery .title {
+  padding-left: 15px;
+  margin-bottom: 25px; }
 
 .template-classes .section.gender-filter {
   padding-top: 200px; }
@@ -1664,19 +1740,23 @@ aside.sidebar-footer .widget_older_post {
     .training-info .schedule .tabs-wrapper .tab-content input[name='time'] + label {
       padding: 1rem; }
 
-.training-info .gallery-wrapper {
+#galleryModal .modal-dialog #imgPlaceholder img {
+  width: 100%;
+  height: auto; }
+
+.gallery-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; }
-  .training-info .gallery-wrapper .gallery-item-wrapper {
+  .gallery-wrapper .gallery-item-wrapper {
     position: relative;
     padding: 0;
     width: 250px;
     height: 165px;
     overflow: hidden;
     margin: 0 15px 15px 0; }
-    .training-info .gallery-wrapper .gallery-item-wrapper .gallery-item-overlay {
+    .gallery-wrapper .gallery-item-wrapper .gallery-item-overlay {
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -1684,14 +1764,14 @@ aside.sidebar-footer .widget_older_post {
       height: 0;
       opacity: 0;
       transition: all .3s ease-in-out; }
-    .training-info .gallery-wrapper .gallery-item-wrapper:hover .gallery-item-overlay {
+    .gallery-wrapper .gallery-item-wrapper:hover .gallery-item-overlay {
       height: 100%;
       opacity: 1;
       transition: all .3s ease-in-out; }
-    .training-info .gallery-wrapper .gallery-item-wrapper .gallery-thumbnail {
+    .gallery-wrapper .gallery-item-wrapper .gallery-thumbnail {
       width: 100%;
       height: auto; }
-    .training-info .gallery-wrapper .gallery-item-wrapper .search-icon {
+    .gallery-wrapper .gallery-item-wrapper .search-icon {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1700,24 +1780,20 @@ aside.sidebar-footer .widget_older_post {
       width: 100%;
       height: 100%;
       z-index: 3; }
-      .training-info .gallery-wrapper .gallery-item-wrapper .search-icon:before {
+      .gallery-wrapper .gallery-item-wrapper .search-icon:before {
         position: absolute;
         content: '';
         width: .5rem;
         height: .5rem;
         transform: rotate(-180deg);
         transition: all .3s ease-in-out; }
-      .training-info .gallery-wrapper .gallery-item-wrapper .search-icon:hover:before {
+      .gallery-wrapper .gallery-item-wrapper .search-icon:hover:before {
         position: absolute;
         content: '';
         width: 100%;
         height: 100%;
         transform: rotate(0);
         transition: all .3s ease-in-out; }
-
-.training-info #galleryModal .modal-dialog #imgPlaceholder img {
-  width: 100%;
-  height: auto; }
 
 .training .stats-row:before {
   content: '';
@@ -1774,19 +1850,24 @@ aside.sidebar-footer .widget_older_post {
               .template-reviews .reviews .review-item .item-inner .well .carousel-caption blockquote .quote.right {
                 transform: translateY(40px); }
 
-.template-reviews .pagination {
+.template-reviews #respond {
+  max-width: 800px; }
+  .template-reviews #respond .reply-title {
+    margin: 45px 0; }
+
+.pagination {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; }
-  .template-reviews .pagination div {
+  .pagination div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; }
-    .template-reviews .pagination div ul {
+    .pagination div ul {
       list-style-type: none;
       display: flex;
       flex-direction: row;
@@ -1794,7 +1875,7 @@ aside.sidebar-footer .widget_older_post {
       align-items: center;
       justify-content: center;
       margin: 0; }
-      .template-reviews .pagination div ul li {
+      .pagination div ul li {
         margin: 0.5rem;
         width: 2rem;
         height: 2rem;
@@ -1803,17 +1884,12 @@ aside.sidebar-footer .widget_older_post {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center; }
-        .template-reviews .pagination div ul li.active {
+        .pagination div ul li.active {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
           align-items: center;
           justify-content: center; }
-
-.template-reviews #respond {
-  max-width: 800px; }
-  .template-reviews #respond .reply-title {
-    margin: 45px 0; }
 
 .registration {
   position: relative; }
@@ -2528,10 +2604,14 @@ aside.sidebar-footer .widget_older_post {
     flex-direction: row;
     justify-content: center;
     align-items: center; }
+  .template-reviews .reviews .review-item {
+    max-width: 576px; }
   #reviewslider .carousel-control.right span {
     right: 16px; }
   #reviewslider .carousel-control.left span {
-    left: 16px; } }
+    left: 16px; }
+  .contacts-section .contacts-container {
+    position: relative; } }
 
 @media screen and (min-width: 576px) {
   .well.classes-thumbnail {
